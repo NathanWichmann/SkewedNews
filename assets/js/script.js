@@ -4,6 +4,13 @@ var topHeadline;
 
 
 
+// REMOVE BOOTSTRAP COMPONENTS
+// REPLACE WITH MATERIALIZE
+
+
+
+
+
 // The possible section value are: arts, automobiles, books, business, fashion, food, health, home, insider,
 // magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview,
 // technology, theater, t-magazine, travel, upshot, us, and world.
