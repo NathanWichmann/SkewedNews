@@ -6,6 +6,8 @@ var topHeadline;
 // REMOVE BOOTSTRAP COMPONENTS
 // REPLACE WITH MATERIALIZE
 
+// Top-stories documentation:
+// https://developer.nytimes.com/docs/top-stories-product/1/overview
 
 
 function getTopHeadlineNews() {
