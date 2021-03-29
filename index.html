@@ -1,25 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <!-- REMOVE BOOTSTRAP COMPONENTS -->
     <!-- REPLACE WITH MATERIALIZE -->
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Skewed News</title>
 </head>
+
 <body>
+    <!--navbar-->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Skewed News</a></li>
+
+                <!--menu/dropdown icon-->
+                <li>
+                    <a data-target='dropdown1'><i class="material-icons">menu</i></a>
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><a href="#!">one</a></li>
+                        <li><a href="#!">two</a></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li><a href="#!">three</a></li>
+                        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+                        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <hr />
+    <!--component button-->
+    <div class="row">
+        <div class="center align-items: center">
+            <a class="waves-effect waves-light btn-large btn-block" style="width:90%">Search news articles</a>
+        </div>
+    </div>
+
+    <!--tabs scheme-->
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#test1">Tab 1</a></li>
+                    <li class="tab col s3"><a class="active" href="#test2">Tab 2</a></li>
+                    <li class="tab col s3"><a href="#test3">Tab 3</a></li>
+
+                </ul>
+            </div>
+            <div id="test1" class="col s12">Test 1</div>
+            <div id="test2" class="col s12">Test 2</div>
+            <div id="test3" class="col s12">Test 3</div>
+        </div>
+    </div>
+
+
+    <!--Remove-->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -48,10 +103,11 @@
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="assets/js/materialize.js"></script>
 </body>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <!-- popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <!-- twitter-bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<!-- popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<!-- twitter-bootstrap -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 </html>
