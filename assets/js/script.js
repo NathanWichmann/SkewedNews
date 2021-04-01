@@ -110,4 +110,4 @@ searchBtn.on('click', function () {
 //     var cardTitle = $("<h4>").addClass("card-title").text(topHeadline.results[i].title);
 //     var cardText = $("<p>").addClass("card-text").text(topHeadline.results[i].abstract);
 //     var cardDate = $("<p>").addClass("card-text").text(topHeadline.results[i].created_date.substring(0,10));
-//     $(outputs).append(card.append(cardBody.append(image, cardTitle, cardDate, cardText)));
+//     $(outputs).append(card.append(cardBody.append(image, cardTitle, cardDate, cardText)));git staus
