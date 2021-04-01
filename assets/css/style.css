@@ -1,3 +1,13 @@
 .btn-block {
     width: 100%;
 }
+
+.waves-effect  {
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.waves-effect:hover{
+    background-color:rgb(60, 163, 115);
+    font-weight: bolder;
+}
