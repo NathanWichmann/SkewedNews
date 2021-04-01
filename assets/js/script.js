@@ -26,9 +26,9 @@ var mostPopularContent = document.getElementById("most-popular-content");
 // };
 // getTopHeadlineNews();
 
-var inputEl = $('#input-search')
+// var inputEl = $('#input-search')
 
-var searchBtn = $('#searchBtn');
+// var searchBtn = $('#searchBtn');
 
 var apikey = "83c7d26f8a3344048899256bb42d6bf1"
 
