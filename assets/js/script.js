@@ -26,6 +26,80 @@ function getTopHeadlineNews() {
 };
 getTopHeadlineNews();
 
+var inputEl = $('#input-search')
+
+var searchBtn = $('#searchBtn');
+
+var apikey = "83c7d26f8a3344048899256bb42d6bf1"
+
+
+fetch('https://saurav.tech/NewsAPI/everything/cnn.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    // console.log(data);
+
+    for ( i = 0; i < data.articles.length; i++) { 
+        console.log (data.articles[i])
+
+
+
+    }
+});
+
+
+fetch('https://saurav.tech/NewsAPI/everything/bbc-news.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    // console.log(data);
+
+    for ( i = 0; i < data.articles.length; i++) { 
+        console.log (data.articles[i])
+
+
+
+    }
+});
+
+fetch('https://saurav.tech/NewsAPI/everything/fox-news.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    // console.log(data);
+
+    for ( i = 0; i < data.articles.length; i++) { 
+        console.log (data.articles[i].url)
+
+
+
+    }
+});
+
+fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    // console.log(data);
+
+    for ( i = 0; i < data.articles.length; i++) { 
+        console.log (data.articles[i].content)
+
+
+
+    }
+});
+
+searchBtn.on('click', function () {
+
+    inputEl = input.val()
+    console.log(input.val());
+    
+});
 
 // submitButton.addEventListener("click", getTopHeadlineNews);
 
