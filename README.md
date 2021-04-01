@@ -1,8 +1,3 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/weird-but-doable/SkewedNews?color=cyan&label=Last%20Commit&logo=github&logoColor=cyan)
-![GitHub contributors](https://img.shields.io/github/contributors/weird-but-doable/SkewedNews?color=red&logo=git)
-
-
-
 # SkewedNews
 
 
