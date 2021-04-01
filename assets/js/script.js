@@ -101,6 +101,18 @@ searchBtn.on('click', function () {
     
 });
 
+// modal ------------------------
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+  
+  var instance = M.Modal.getInstance(elem);
+  instance.open();
+  instance.close();
+  instance.destroy();
+
+
 // submitButton.addEventListener("click", getTopHeadlineNews);
 
 // for (var i = 0; i < 10; i++) {
