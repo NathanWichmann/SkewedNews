@@ -1,30 +1,30 @@
 var mostPopular = document.getElementById("most-popular");
 var mostPopularContent = document.getElementById("most-popular-content");
 
-console.log(mostPopular.innerHTML);
-console.log(mostPopularContent.innerHTML);
+// console.log(mostPopular.innerHTML);
+// console.log(mostPopularContent.innerHTML);
 
-var newsContent;
+// var newsContent;
 
-function getTopHeadlineNews() {
-    // var apiURL = 'http://api.mediastack.com/v1/news?&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f';
+// function getTopHeadlineNews() {
+//     // var apiURL = 'http://api.mediastack.com/v1/news?&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f';
 
 
-    var apiURL = 'https://api.mediastack.com/v1?sources&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f&search=bbc';
-    fetch(apiURL).then(function (response) {
-        if (response.ok){
-            response.json().then(function (data) {
-                localStorage.setItem('news', JSON.stringify(data));
-                newsContent = (JSON.parse(localStorage.getItem("news")));
-                console.log(data);
-                return;
-            });
-        } else {
-            alert("Error");
-        }
-    });
-};
-getTopHeadlineNews();
+//     var apiURL = 'https://api.mediastack.com/v1?sources&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f&search=bbc';
+//     fetch(apiURL).then(function (response) {
+//         if (response.ok){
+//             response.json().then(function (data) {
+//                 localStorage.setItem('news', JSON.stringify(data));
+//                 newsContent = (JSON.parse(localStorage.getItem("news")));
+//                 console.log(data);
+//                 return;
+//             });
+//         } else {
+//             alert("Error");
+//         }
+//     });
+// };
+// getTopHeadlineNews();
 
 var inputEl = $('#input-search')
 
