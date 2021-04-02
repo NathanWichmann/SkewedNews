@@ -94,23 +94,26 @@ fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
     }
 });
 
-searchBtn.on('click', function () {
+// searchBtn.on('click', function () {
 
-    inputEl = input.val()
-    console.log(input.val());
+//     inputEl = input.val()
+//     console.log(input.val());
     
-});
+// });
 
 // modal ------------------------
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
+var instance = M.Modal.getInstance(elem);
 
-  
-  var instance = M.Modal.getInstance(elem);
   instance.open();
   instance.close();
   instance.destroy();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+  
+
 
 
 // submitButton.addEventListener("click", getTopHeadlineNews);
