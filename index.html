@@ -33,13 +33,7 @@
             <div class="nav-wrapper #212121 grey darken-4">
                 <a href="#" class="brand-logo left">Logo</a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="#">Skewed News</a></li>
-                    <!--menu/dropdown icon-->
-                    <li>
-                        <a data-target='dropdown1'><i class="material-icons">menu</i></a>
-                        <ul id='dropdown1' class='dropdown-content'>
-                            <li><a href="mailto:SkewedNews@gmail.com">Contact Us</a></li>    
-                        </ul>
+                    <li><a href="mailto:SkewedNews@gmail.com">Contact Us</a></li>    
                     </li>
                 </ul>
             </div>
@@ -47,18 +41,60 @@
         <!--component button-->
         <div class="row opacity-searchbtn">
             <div class="center align-items: center">
-                <a class="waves-effect waves-light btn-large btn-block #ffc107 amber" style="width:90%"><span class="black-text">Search news articles</span></a>
+                <a class="waves-effect waves-light btn-large btn-block #ffc107 amber" href="#modal1" style="width:90%"><span class="black-text">Search news articles</span></a>
             </div>
         </div>
 
-        <!-- Modal Trigger -->
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer .modal-close">
             <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
+                 <!-- Modal form -->   
+                 <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                          <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input id="last_name" type="text" class="validate">
+                          <label for="last_name">Last Name</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                          <label for="disabled">Disabled</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="password" type="password" class="validate">
+                          <label for="password">Password</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="email" type="email" class="validate">
+                          <label for="email">Email</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col s12">
+                          This is an inline input field:
+                          <div class="input-field inline">
+                            <input id="email_inline" type="email" class="validate">
+                            <label for="email_inline">Email</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+
+
             </div>
             <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -70,7 +106,7 @@
         <!--tabs scheme-->
         <div class="card">
             <div class="card-content">
-                <p>Check out the most recent NEws!</p>
+                <p>Check out the most recent news!</p>
             </div>
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
@@ -80,15 +116,13 @@
                 </ul>
             </div>
                 <div class="card-content grey lighten-4">
-                    <div id="most-popular-content">Test 1</div>
-                    <div id="test2">Test 2</div>
-                    <div id="test3">Test 3</div>
+                    <div id="most-popular-content"> THIS IS THE CONTENT -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis nulla eget felis condimentum pellentesque. Aliquam pellentesque ex a ipsum mollis, non vehicula velit sagittis. Etiam dapibus condimentum odio, ultricies iaculis enim euismod nec. Phasellus hendrerit odio lectus, sit amet tempor orci eleifend et. Morbi blandit risus nisi, ut facilisis mi porta sed. Nunc ac eros orci. Proin ac erat imperdiet, maximus leo non, vulputate urna. Maecenas scelerisque leo nibh, ut auctor felis interdum ac. Ut aliquam turpis id lorem feugiat, ut auctor eros gravida. Pellentesque laoreet risus nunc, a convallis sem ultricies et. Sed ut aliquet nibh. Suspendisse dapibus quis sem at maximus. Curabitur pellentesque velit sit amet varius interdum. Duis dapibus sodales mi eu porttitor. Donec vel tempus nibh.</div>
                 </div>
             </div>
         </div>
         <!-- category cards 1st row -->
         <div class="row">
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
@@ -99,7 +133,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
@@ -110,7 +144,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
@@ -124,7 +158,7 @@
         </div>
         <!-- category card 2nd row -->
         <div class="row">
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
@@ -135,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
@@ -146,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col s12 m4">
+            <div class="col s4 m6">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="https://kids.kiddle.co/images/thumb/b/b9/Football_iu_1996.jpg/300px-Football_iu_1996.jpg">
