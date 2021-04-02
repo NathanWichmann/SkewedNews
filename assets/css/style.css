@@ -1,3 +1,7 @@
+.spaceBtwn{
+  align-content: space-between;
+}
+
 .opacity-searchbtn{
 opacity: 0.8;
 }
