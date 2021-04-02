@@ -1,5 +1,11 @@
-.spaceBtwn{
-  align-content: space-between;
+.picImage{
+  /* width: 300px;
+  height: 200px; */
+  border:1px black solid;
+}
+
+.card{
+ border-radius: 50px;
 }
 
 .opacity-searchbtn{
@@ -16,7 +22,7 @@ opacity: 0.8;
 
 .waves-effect  {
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .waves-effect:hover{
