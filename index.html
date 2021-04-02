@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,28 +12,25 @@
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/style.css">
         <title>Skewed News</title>
-     
     </head>
-
     <body style ="background-color: black;">
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
         <!--background-->
-        
-    <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
-    </div>
-
-        
+        <div class="bg-animation">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        </div>
         <!--navbar-->  
-        
         <nav>
             <div class="nav-wrapper #212121 grey darken-4">
                 <a href="#" class="brand-logo left">Logo</a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="mailto:SkewedNews@gmail.com">Contact Us</a></li>    
-                    </li>
+                    <li><a href="mailto:SkewedNews@gmail.com">Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -44,8 +40,6 @@
                 <a class="waves-effect waves-light btn-large btn-block #ff8f00 amber darken-3" href="#modal1" style="width:90%"><span class="black-text">Search news articles</span></a>
             </div>
         </div>
-
-
         <!-- Modal Structure -->
         <div id="modal1" class="modal modal-fixed-footer .modal-close">
             <div class="modal-content">
@@ -92,22 +86,13 @@
                       </div>
                     </form>
                   </div>
-
-
-
             </div>
             <div class="modal-footer">
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
         </div>
-
-
-
         <!--tabs scheme-->
         <div class="card">
-            <div class="card-content">
-                <p>Check out the most recent news!</p>
-            </div>
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
                     <li class="tab" id="most-popular"><a href="#test4">Most Popular News</a></li>
@@ -115,8 +100,38 @@
                     <li class="tab"><a href="#test6">Something else</a></li>
                 </ul>
             </div>
-                <div class="card-content grey lighten-4">
-                    <div id="most-popular-content"> THIS IS THE CONTENT -- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras iaculis nulla eget felis condimentum pellentesque. Aliquam pellentesque ex a ipsum mollis, non vehicula velit sagittis. Etiam dapibus condimentum odio, ultricies iaculis enim euismod nec. Phasellus hendrerit odio lectus, sit amet tempor orci eleifend et. Morbi blandit risus nisi, ut facilisis mi porta sed. Nunc ac eros orci. Proin ac erat imperdiet, maximus leo non, vulputate urna. Maecenas scelerisque leo nibh, ut auctor felis interdum ac. Ut aliquam turpis id lorem feugiat, ut auctor eros gravida. Pellentesque laoreet risus nunc, a convallis sem ultricies et. Sed ut aliquet nibh. Suspendisse dapibus quis sem at maximus. Curabitur pellentesque velit sit amet varius interdum. Duis dapibus sodales mi eu porttitor. Donec vel tempus nibh.</div>
+            <!-- carousel -->
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center"></div>
+                <!-- tab1 -->
+                <div class="carousel-item cc0 black-text" href="#one!">
+                    <h2 id="title-content">First Panel</h2>
+                    <p id="description" class="black-text">This is your first panel</p>
+                    <a id="url" class="btn waves-effect white grey-text darken-text-2">button</a>
+                </div>
+                <!-- tab2 -->
+                <div class="carousel-item cc1 white-text" href="#two!">
+                    <h2 id="title-content">Second Panel</h2>
+                    <p class="white-text">This is your second panel</p>
+                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                </div>
+                <!-- tab3 -->
+                <div class="carousel-item cc2 white-text" href="#three!">
+                    <h2 id="title-content">Third Panel</h2>
+                    <p class="white-text">This is your third panel</p>
+                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                </div>
+                <!-- tab4 -->
+                <div class="carousel-item cc3 white-text" href="#four!">
+                    <h2 id="title-content">Fourth Panel</h2>
+                    <p class="white-text">This is your fourth panel</p>
+                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
+                </div>
+                <!-- tab5 -->
+                <div class="carousel-item cc4 white-text" href="#four!">
+                    <h2 id="title-content">Fourth Panel</h2>
+                    <p class="white-text">This is your fourth panel</p>
+                    <a class="btn waves-effect white grey-text darken-text-2">button</a>
                 </div>
             </div>
         </div>
@@ -206,7 +221,6 @@
                             <li><a class="grey-text text-lighten-3" href="https://www.bbc.com/">BBC</a></li>
                             <li><a class="grey-text text-lighten-3" href="https://www.cnn.com/">CNN</a></li>
                             <li><a class="grey-text text-lighten-3" href="https://www.foxnews.com/">FOX NEWS</a></li>
-                           
                             <li><a class="grey-text text-lighten-3" href="https://news.google.com/topstories?hl=en-CA&gl=CA&ceid=CA:en">GOOGLE NEWS</a></li>
                         </ul>
                     </div>
@@ -218,13 +232,9 @@
                 </div>
             </div>
         </footer>
-        <!-- javascript -->
-        <script type="text/javascript" src="./assets/js/script.js"></script>
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="assets/js/materialize.js"></script>
+        <!-- javascript -->
+        <script type="text/javascript" src="./assets/js/test.js"></script>
     </body>
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<!-- popper.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 </html>
