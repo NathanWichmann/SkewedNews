@@ -127,3 +127,7 @@ $('.carousel.carousel-slider').carousel({
 $(document).ready(function(){
     $('.tabs').tabs();
   });
+
+ $(document).ready(function(){
+    $('select').formSelect();
+  });
