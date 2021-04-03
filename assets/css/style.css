@@ -15,15 +15,23 @@ body {
     object-fit: cover;
 }
 
-.card{
- border-radius: 50px;
- background-color: rgba(255, 255, 255, 0.815);
+.cc0, .cc1, .cc2, .cc3, .cc4 {
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-color:black;
 }
 
-.cardText{
-font-weight: bolder;
-
+.carousel {
+    height:500px;
 }
+
+.tab {
+    background-color:#cc7200;
+    color: black;
+    font-weight: 600;
+}
+
 .opacity-searchbtn{
 opacity: 0.8;
 }
