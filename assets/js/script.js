@@ -80,18 +80,15 @@ fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
 })
 .then(function (data) {
     console.log(data);
-
     for ( i = 0; i < 5; i++) { 
-        console.log (data.articles[i])
-        // topHeadlinesImage.src = data.articles[i].urlToImage;
-        // topHeadlinesDate.innerHTML = data.articles[i].publishedAt;
-        topHeadlinesTitle.innerHTML = data.articles[i].title;
-        topHeadlinesDesc.innerHTML = data.articles[i].description;
-        // topHeadlinesAuthor.innerHTML = data.articles[i].author;
-        // topHeadlinesSource.innerHTML = data.articles[i].source.name;
-        topHeadlinesUrl.href = data.articles[i].url;
+        console.log (data.articles[i]);
         $(".cc" + i).css({"background-image" : "url(" + data.articles[i].urlToImage + ")", "background-repeat":  "no-repeat"});
-
+        $("#published-date" + i).text(data.articles[i].publishedAt);
+        $("#source" + i).text(data.articles[i].source.name);
+        $("#author" + i).text(data.articles[i].author);
+        $("#title-content" + i).text(data.articles[i].title);
+        $("#description" + i).text(data.articles[i].description);
+        $("#url" + i).attr("href", data.articles[i].url).attr({"target" : "_blank"});
     }
 });
 
