@@ -1,37 +1,14 @@
 var mostPopular = document.getElementById("most-popular");
 var mostPopularContent = document.getElementById("most-popular-content");
+var topHeadlinesImage = document.getElementById("url-to-image");
+var topHeadlinesDate = document.getElementById("published-date");
+var topHeadlinesTitle = document.getElementById("title-content");
+var topHeadlinesDesc = document.getElementById("description");
+var topHeadlinesAuthor = document.getElementById("author");
+var topHeadlinesSource = document.getElementById("source");
+var topHeadlinesUrl = document.getElementById("url");
 
-// console.log(mostPopular.innerHTML);
-// console.log(mostPopularContent.innerHTML);
-
-// var newsContent;
-
-// function getTopHeadlineNews() {
-//     // var apiURL = 'http://api.mediastack.com/v1/news?&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f';
-
-
-//     var apiURL = 'https://api.mediastack.com/v1?sources&sources=en&access_key=8fcb8dd3df70c7830e622a83fed5dd6f&search=bbc';
-//     fetch(apiURL).then(function (response) {
-//         if (response.ok){
-//             response.json().then(function (data) {
-//                 localStorage.setItem('news', JSON.stringify(data));
-//                 newsContent = (JSON.parse(localStorage.getItem("news")));
-//                 console.log(data);
-//                 return;
-//             });
-//         } else {
-//             alert("Error");
-//         }
-//     });
-// };
-// getTopHeadlineNews();
-
-// var inputEl = $('#input-search')
-
-// var searchBtn = $('#searchBtn');
-
-var apikey = "83c7d26f8a3344048899256bb42d6bf1"
-
+//////////////////////////////////////////////////////////////////////////////////////////////
 
 fetch('https://saurav.tech/NewsAPI/everything/cnn.json')
 .then(function (response) {
@@ -41,7 +18,7 @@ fetch('https://saurav.tech/NewsAPI/everything/cnn.json')
     // console.log(data);
 
     for ( i = 0; i < data.articles.length; i++) { 
-        console.log (data.articles[i])
+        // console.log (data.articles[i])
 
 
 
@@ -57,7 +34,7 @@ fetch('https://saurav.tech/NewsAPI/everything/bbc-news.json')
     // console.log(data);
 
     for ( i = 0; i < data.articles.length; i++) { 
-        console.log (data.articles[i])
+        // console.log (data.articles[i])
 
 
 
@@ -72,7 +49,8 @@ fetch('https://saurav.tech/NewsAPI/everything/fox-news.json')
     // console.log(data);
 
     for ( i = 0; i < data.articles.length; i++) { 
-        console.log (data.articles[i].url)
+        // console.log (data.articles[i].url)
+        
 
 
 
@@ -87,7 +65,7 @@ fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
     // console.log(data);
 
     for ( i = 0; i < data.articles.length; i++) { 
-        console.log (data.articles[i].content)
+        // console.log (data.articles[i].content)
 
 
 
@@ -114,6 +92,23 @@ fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
 //   });
   
 
+fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    console.log(data);
+    for ( i = 0; i < 5; i++) { 
+        console.log (data.articles[i]);
+        $(".cc" + i).css({"background-image" : "url(" + data.articles[i].urlToImage + ")", "background-repeat":  "no-repeat"});
+        $("#published-date" + i).text(data.articles[i].publishedAt);
+        $("#source" + i).text(data.articles[i].source.name);
+        $("#author" + i).text(data.articles[i].author);
+        $("#title-content" + i).text(data.articles[i].title);
+        $("#description" + i).text(data.articles[i].description);
+        $("#url" + i).attr("href", data.articles[i].url).attr({"target" : "_blank"});
+    }
+});
 
 
 // submitButton.addEventListener("click", getTopHeadlineNews);
@@ -126,3 +121,10 @@ fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
 //     var cardText = $("<p>").addClass("card-text").text(topHeadline.results[i].abstract);
 //     var cardDate = $("<p>").addClass("card-text").text(topHeadline.results[i].created_date.substring(0,10));
 //     $(outputs).append(card.append(cardBody.append(image, cardTitle, cardDate, cardText)));git staus
+
+
+
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+});
