@@ -8,6 +8,11 @@ body {
     background-color: black;
 }
 
+nav .brand-logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
 
 .card-image {
     width: 100%;
