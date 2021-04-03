@@ -101,17 +101,17 @@ fetch('https://saurav.tech/NewsAPI/everything/google-news.json')
     
 // });
 
-// modal ------------------------
-var instance = M.Modal.getInstance(elem);
+// // modal ------------------------
+// var instance = M.Modal.getInstance(elem);
 
-  instance.open();
-  instance.close();
-  instance.destroy();
+//   instance.open();
+//   instance.close();
+//   instance.destroy();
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('.modal');
+//     var instances = M.Modal.init(elems, options);
+//   });
   
 
 
