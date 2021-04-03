@@ -92,6 +92,18 @@ fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
     }
 });
 
+fetch('https://saurav.tech/NewsAPI/sources.json ')
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    console.log(data);
+    for ( i = 0; i < data.length; i++) { 
+        console.log (data.sources[0][0]);
+    }
+});
+
+
 
 // submitButton.addEventListener("click", getTopHeadlineNews);
 
@@ -110,3 +122,8 @@ $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
 });
+
+
+$(document).ready(function(){
+    $('.tabs').tabs();
+  });
