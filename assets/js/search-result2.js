@@ -18,7 +18,7 @@ var fetchedResult = JSON.parse(localStorage.getItem("searchedData2"));
 console.log(fetchedResult);
 
 function run() {
-    $(searchedTitle).text("Searched for " + selectedNewsSource);
+    $(searchedTitle).text(selectedNewsSource);
     for (var i = 0; i < 20; i++) {
         var card = $("<div>").css({
             "margin-top" : "60px", 

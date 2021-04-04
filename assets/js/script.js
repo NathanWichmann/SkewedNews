@@ -54,9 +54,9 @@ function clickedCategory(a) {
         return response.json();
     })
     .then(function (data) {
+        localStorage.setItem("categoryName", a.parentElement.parentElement.id)
         displayResults(data);
     });
-
 }
 
 function displayResults(data) {
@@ -74,6 +74,7 @@ $(document).ready(function(){
     $('.tabs').tabs();
     $('.modal').modal();
     $('select').formSelect();
+    $('.tooltipped').tooltip();
     $("select.country").change(function(){
         selectedCountry = $(this).children("option:selected").val();
         console.log(selectedCountry);

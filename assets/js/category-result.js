@@ -1,9 +1,13 @@
 var displayContent = document.querySelector("#display-content");
 
+var categoryName = localStorage.getItem("categoryName");
+var capCategoryName = categoryName[0].toUpperCase() + categoryName.slice(1);
+console.log(capCategoryName);
+
 var fetchedResult = JSON.parse(localStorage.getItem("passedData"));
 console.log(fetchedResult);
-
 function run() {
+    $(searchedTitle).text(capCategoryName);
     for (var i = 0; i < 20; i++) {
         var card = $("<div>").css({
             "margin-top" : "60px", 
