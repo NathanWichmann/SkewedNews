@@ -3,33 +3,105 @@
     border-radius: 50px;
     background-color:transparent;
 }
+.card-image{
+    box-shadow: 1px 1px 15px orange;
+}
+
+.picImage:hover{
+    scale: 1.005;
+}
 
 body {
     background-color: black;
 }
 
+/* #logo {
+    width: 100px;
+    height: 100px;
+} */
+
+.search-button {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    max-width: 70%;
+}
+
+.search-container {
+    text-align: center;
+}
+
+.modal {
+     max-height: 100%; 
+     overflow: visible;
+     text-align: center;
+     max-width: 100%;
+     background-color:bisque;
+}
+
+.modal * {
+    color: #854b00;
+}
+
+
+.navigation-bar {
+    margin-bottom: 30px;
+}
+
+#search-button1, #search-button2 {
+    margin-bottom: 3em;
+    background-color: #ff9204;
+}
+
+#search-button1:hover, #search-button2:hover {
+    background-color: #cc7200;
+}
 
 .card-image {
     width: 100%;
     height: 15vw;
     object-fit: cover;
+    border-radius: 30%;
+}
+
+.card-content {
+    text-align: center;
 }
 
 .cc0, .cc1, .cc2, .cc3, .cc4 {
     background-repeat: no-repeat;
     background-size:contain;
     background-position:center;
-    background-color:black;
+    background-color:#1f1b16;
+}
+
+#url0, #url1, #url2, #url3, #url4 {
+    background-color: #cc7200;
+    margin-top: 20em;
+}
+
+#title-content0, #title-content1, #title-content2, #title-content3, #title-content4 {
+    color: white;
+    font-size: 22px;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px #000000, 2px 2px 2px #cc7200;
+} 
+
+.input-field select option {
+    color: #cc7200;
 }
 
 .carousel {
-    height:500px;
+    height:600px;
 }
 
 .tab {
     background-color:#cc7200;
     color: black;
     font-weight: 600;
+    cursor: pointer;
+}
+.tab:hover {
+    text-shadow: 2px 2px 4px black;
 }
 
 .opacity-searchbtn{
@@ -38,47 +110,8 @@ opacity: 0.8;
 
 .opacity-card{
     opacity: 0.9;
-    }
+}
     
-.btn-block {
-    width: 100%;
-}
+/* @media only screen and (max-width: 900px) {
 
-.waves-effect  {
-    margin-top: 10px;
-    border-radius: 50px;
-}
-
-.waves-effect:hover{
-    background-color:rgb(60, 163, 115);
-    font-weight: bolder;
-}
-
-.black-text{
-    color: black;
-}
-  
-.full-wh {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 100%;
-}
-
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.bg-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-}
+  } */

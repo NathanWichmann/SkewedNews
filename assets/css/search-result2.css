@@ -1,0 +1,10 @@
+#display-content {
+    margin-right: auto;
+    margin-left: auto;
+}
+body {
+    color: white;
+}
+#searchedTitle {
+    text-align: center;
+}
