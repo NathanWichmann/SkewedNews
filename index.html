@@ -9,6 +9,7 @@
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
@@ -19,6 +20,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- popper.js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <!-- moment.js -->
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <!--navbar-->  
         <nav class="navigation-bar">
             <div class="nav-wrapper #212121 grey darken-4">
@@ -125,12 +128,12 @@
         <div class="row center">
             <div class="col s4">
                 <div class="card picImage" id="general">
-                    <div class="card-image waves-effect waves-block waves-light">
+                    <div class="card-image waves-effect waves-block">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://chessdailynews.com/wp-content/uploads/2015/03/general_news1.jpg">
+                        src="./images/general.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">General</span>
+                        <span class=" catTitle activator text-darken-4">General</span>
                     </div>
                 </div>
             </div>
@@ -138,10 +141,10 @@
                 <div class="card picImage" id="sports">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://cdn.britannica.com/84/139484-050-D91679CC/Michael-Ballack-Germany-Italy-Cristian-Zaccardo-March-1-2006.jpg">
+                        src="./images/sports.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">Sports</span>
+                        <span class=" catTitle activator text-darken-4">Sports</span>
                     </div>
                 </div>
             </div>
@@ -149,10 +152,10 @@
                 <div class="card picImage" id="health">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://aboutwebreach.com/wp-content/uploads/2018/08/Health-Technology.jpg">
+                        src="./images/health.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">Health</span>
+                        <span class=" catTitle activator text-darken-4">Health</span>
                     </div>
                 </div>
             </div>
@@ -163,10 +166,10 @@
                 <div class="card picImage" id="technology">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://regionweek.com/wp-content/uploads/2018/12/technology-591103f20ff18.jpg">
+                        src="./images/technology.jpg">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">Tech</span>
+                        <span class=" catTitle activator text-darken-4">Tech</span>
                     </div>
                 </div>
             </div>
@@ -174,10 +177,10 @@
                 <div class="card picImage" id="science">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://www.gutmicrobiotaforhealth.com/wp-content/uploads/2019/12/RP_Gut_microbiota_science_2019.png">
+                        src="./images/science.png">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">Science</span>
+                        <span class=" catTitle activator text-darken-4">Science</span>
                     </div>
                 </div>
             </div>
@@ -185,22 +188,57 @@
                 <div class="card picImage" id="business">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
-                        src="https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-20488.jpg?size=626&ext=jpg">
+                        src="./images/business.webp">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator white-text text-darken-4">Business</span>
+                        <span class=" catTitle activator text-darken-4">Business</span>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <h5 class="weather-desc center">Enter a city name to <br>display the current weather:</h5>
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field center">
+                        <input id="entered-city" type="search" placeholder="Enter a city">
+                        <i class="material-icons">search</i>
+                        <button type="submit" id="weather-button"class="input-group-addon white btn">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="weather-display">
+                <div class="col s12">
+                    <div class="card-panel">
+                        <div class="weather-header">
+                            <img id="w-icon">
+                            <h3 id="city-name"></h3>
+                        </div>
+                        <div class="weather-info">
+                            <h5 id="date"></h5>
+                            <p id="temp-desc"></p>
+                            <p id="current-temp"></p>
+                            <p id="feels-temp"></p>
+                            <p id="current-humidity"></p>
+                            <p id="current-windspeed"></p>
+                            <small id="note"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- footer -->
         <footer class="page-footer #212121 grey darken-4">
             <div class="footer-copyright">
-                <div class="container">
-                    © 2021 Wierd but Doable LTD<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
+                <p>© 2021 Wierd but Doable LTD</p><span id="time" class="right"></span>
             </div>
         </footer>
+
+        <div class="a-social-icons">
+            <a href="https://github.com/Weird-but-Doable" target="_blank" class="fa fa-github"></a>
+        </div>
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="assets/js/materialize.js"></script>
         <!-- javascript -->

@@ -1,6 +1,5 @@
 .picImage{
-    border:1px black solid;
-    border-radius: 50px;
+    border-radius: 20px;
     background-color:transparent;
 }
 .card-image{
@@ -12,7 +11,7 @@
 }
 
 body {
-    background-color: black;
+    background-color:#fff6e8;
 }
 
 /* #logo {
@@ -24,6 +23,11 @@ body {
     margin-top: 40px;
     margin-bottom: 60px;
     max-width: 70%;
+}
+
+.catTitle {
+    font-size: 18px;
+    color: #000000;
 }
 
 .search-container {
@@ -60,7 +64,12 @@ body {
     width: 100%;
     height: 15vw;
     object-fit: cover;
-    border-radius: 30%;
+    border-top-right-radius: 4%;
+    border-top-left-radius: 4%;
+}
+
+.card-image img { 
+    z-index: 0;
 }
 
 .card-content {
@@ -71,7 +80,7 @@ body {
     background-repeat: no-repeat;
     background-size:contain;
     background-position:center;
-    background-color:#1f1b16;
+    background-color:#ffe9c5;
 }
 
 #url0, #url1, #url2, #url3, #url4 {
@@ -80,10 +89,9 @@ body {
 }
 
 #title-content0, #title-content1, #title-content2, #title-content3, #title-content4 {
-    color: white;
+    color: black;
     font-size: 22px;
-    -webkit-text-stroke: 0.5px black;
-    text-shadow: 2px 2px 2px #000000, 2px 2px 2px #cc7200;
+    text-shadow: 2px 2px 2px #ffffff, 2px 2px 2px #cc7200;
 } 
 
 .input-field select option {
@@ -111,7 +119,78 @@ opacity: 0.8;
 .opacity-card{
     opacity: 0.9;
 }
-    
+
+.weather-header img {
+    float: left;
+}
+.weather-header h3 {
+    position: relative;
+}
+
+#time {
+    color:white;
+    font-size: 18px;
+    padding-right: 1%;
+}
+
+.footer-copyright p {
+    padding-left: 1%;
+}
+
+.weather-desc {
+    color: #000000;
+}
+
+.weather-info p {
+    font-size: 18px;
+}
+
+#weather-button {
+    color: #000000;
+    border-radius: 15px;
+}
+
+#weather-display {
+    display: none;
+}
+
+#entered-city {
+    border: 0.5px solid lightgray;
+    box-shadow: 1px 1px 3px lightgray;
+}
+
+#entered-city::placeholder {
+    color: black;
+}
+
+.a-social-icons {
+    position: fixed;
+    top: 30%;
+    right: 0px;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.a-social-icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    background-color: #ffe9c5;
+    border: 1px solid #303030;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+.a-social-icons a:hover {
+    background-color: #252525;
+    color: #f6f5f5;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+
 /* @media only screen and (max-width: 900px) {
 
   } */
