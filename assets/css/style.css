@@ -1,0 +1,128 @@
+.picImage{
+    border:1px black solid;
+    border-radius: 50px;
+    background-color:transparent;
+}
+.card-image{
+    box-shadow: 1px 1px 15px orange;
+}
+
+.picImage:hover{
+    scale: 1.005;
+}
+
+body {
+    background-color: black;
+}
+
+.search-button {
+    margin-bottom: 60px;
+}
+
+.modal {
+     max-height: 100%; 
+     overflow: visible;
+     text-align: center;
+}
+
+.navigation-bar {
+    margin-bottom: 30px;
+}
+
+#search-button1:hover, #search-button2:hover {
+    background-color: #cc7200;
+}
+
+#search-button2 {
+    margin-bottom: 30px;
+}
+
+.card-image {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.cc0, .cc1, .cc2, .cc3, .cc4 {
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-color:black;
+}
+
+#url0, #url1, #url2, #url3, #url4 {
+    background-color: #cc7200;
+    margin-top: 18em;
+}
+
+#title-content0, #title-content1, #title-content2, #title-content3, #title-content4 {
+    color: white;
+    font-size: 22px;
+    -webkit-text-stroke: 0.5px black;
+    text-shadow: 2px 2px 2px #cc7200;
+} 
+
+.carousel {
+    height:500px;
+}
+
+.tab {
+    background-color:#cc7200;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.tab:hover {
+    text-shadow: 2px 2px 4px black;
+}
+
+.opacity-searchbtn{
+opacity: 0.8;
+}
+
+.opacity-card{
+    opacity: 0.9;
+    }
+    
+.btn-block {
+    width: 100%;
+}
+
+.waves-effect  {
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.waves-effect:hover{
+    background-color:rgb(60, 163, 115);
+    font-weight: bolder;
+}
+
+.black-text{
+    color: black;
+}
+  
+.full-wh {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}

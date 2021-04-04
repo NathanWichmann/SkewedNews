@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+        <!-- css -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <title>Skewed News</title>
+    </head>
+    <body>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- popper.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <!--navbar-->  
+        <nav class="navigation-bar">
+            <div class="nav-wrapper #212121 grey darken-4">
+                <a href="./index.html" class="brand-logo left">Skewed News</a>
+                <ul id="nav-mobile" class="right">
+                    <li><a href="mailto:skewed.newz@gmail.com" target="_blank">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+          <!-- Modal Trigger -->
+        <a class="search-button waves-effect waves-light btn btn-large btn-block modal-trigger #ff8f00 amber darken-3" href="#modal1">Search news articles</a>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h3>Search by Country & Category</h3>
+                <div class="input-field col s12" id="country">
+                    <select class="country">
+                      <option value="" disabled selected>Choose a country</option>
+                      <option value="us">USA</option>
+                      <option value="gb">United Kingdom</option>
+                      <option value="in">India</option>
+                      <option value="au">Australia</option>
+                    </select>
+                    <label>Country</label>
+                </div>
+                <div class="input-field col s12" id="category">
+                    <select class="category">
+                      <option value="" disabled selected>Choose a category</option>
+                      <option value="general">General</option>
+                      <option value="business">Business</option>
+                      <option value="health">Health</option>
+                      <option value="science">Science</option>
+                      <option value="sports">Sports</option>
+                      <option value="technology">Technology</option>
+                    </select>
+                    <label>Category</label>
+                </div>
+                <a class="modal-close waves-effect waves-orange btn-flat" id="search-button1">Search</a>
+                <h3>Search by News Sources</h3>
+                <div class="input-field col s12" id="source">
+                    <select class="news-source">
+                      <option value="" disabled selected>Choose a news source</option>
+                      <option value="bbc-news">BBC News</option>
+                      <option value="fox-news">Fox News</option>
+                      <option value="cnn">CNN</option>
+                    </select>
+                    <label>News Source</label>
+                </div>
+            </div>
+            <a class="modal-close waves-effect waves-orange btn-flat" id="search-button2">Search</a>
+        </div>
+        <!--tabs scheme-->
+        <div class="card">
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a class="white-text" id="most-popular" onclick="startUp()">Top Headlines</a></li>
+                    <li class="tab"><a class="white-text" data-value="cnn" id="tab-cnn" onclick="clickedTab(this)">CNN</a></li>
+                    <li class="tab"><a class="white-text" data-value="bbc-news" id="tab-bbc" onclick="clickedTab(this)">BBC</a></li>
+                    <li class="tab"><a class="white-text" data-value="fox-news" id="tab-fox" onclick="clickedTab(this)">FOX-NEWS</a></li>
+                </ul>
+            </div>
+            <!-- carousel -->
+            <div class="carousel carousel-slider center">
+                <div class="carousel-fixed-item center"></div>
+                <!-- tab1 -->
+                <div class="carousel-item cc0 white-text">
+                    <h2 id="title-content0"></h2>
+                    <a id="url0" class="btn waves-effect orange white-text darken-text-2">Click for more</a>
+                </div>
+                <!-- tab2 -->
+                <div class="carousel-item cc1 white-text">
+                    <h2 id="title-content1"></h2>
+                    <a id="url1" class="btn waves-effect orange white-text darken-text-2">Click for more</a>
+                </div>
+                <!-- tab3 -->
+                <div class="carousel-item cc2 white-text">
+                    <h2 id="title-content2"></h2>
+                    <a id="url2" class="btn waves-effect orange white-text darken-text-2">Click for more</a>
+                </div>
+                <!-- tab4 -->
+                <div class="carousel-item cc3 white-text">
+                    <h2 id="title-content3"></h2>
+                    <a id="url3" class="btn waves-effect orange white-text darken-text-2">Click for more</a>
+                </div>
+                <!-- tab5 -->
+                <div class="carousel-item cc4 white-text">
+                    <h2 id="title-content4"></h2>
+                    <a id="url4" class="btn waves-effect orange white-text darken-text-2">Click for more</a>
+                </div>
+            </div>
+        </div>
+        <!-- category cards 1st row -->
+        <div class="row center">
+            <div class="col s4">
+                <div class="card picImage" id="general">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://chessdailynews.com/wp-content/uploads/2015/03/general_news1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">General</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card picImage" id="sports">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://cdn.britannica.com/84/139484-050-D91679CC/Michael-Ballack-Germany-Italy-Cristian-Zaccardo-March-1-2006.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">Sport</span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 ">
+                <div class="card picImage" id="health">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://aboutwebreach.com/wp-content/uploads/2018/08/Health-Technology.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">Health</span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- category card 2nd row-->
+        <div class="row center"> 
+            <div class="col s4">
+                <div class="card picImage" id="technology">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://regionweek.com/wp-content/uploads/2018/12/technology-591103f20ff18.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">Tech</span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card picImage" id="science">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://www.gutmicrobiotaforhealth.com/wp-content/uploads/2019/12/RP_Gut_microbiota_science_2019.png">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">Science</span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="card picImage" id="business">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator responsive-img" onclick="clickedCategory(this)" src="https://img.freepik.com/free-photo/business-people-shaking-hands-together_53876-20488.jpg?size=626&ext=jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator white-text text-darken-4">Business</span>
+                        <!-- <p><a href="#">This is a link</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="page-footer #212121 grey darken-4">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2021 Wierd but Doable LTD<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+        </footer>
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="assets/js/materialize.js"></script>
+        <!-- javascript -->
+        <script type="text/javascript" src="./assets/js/script.js"></script>
+    </body>
+</html>
