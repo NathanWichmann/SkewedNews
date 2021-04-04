@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #display-content {
     margin-right: auto;
     margin-left: auto;
@@ -8,15 +7,4 @@ body {
 }
 #searchedTitle {
     text-align: center;
-=======
-#display-content {
-    margin-right: auto;
-    margin-left: auto;
-}
-body {
-    color: white;
-}
-#searchedTitle {
-    text-align: center;
->>>>>>> 2986ba2144fc243f6b5ee5b0d5a2ea90378992f7
 }
