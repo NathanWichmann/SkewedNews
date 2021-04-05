@@ -23,7 +23,7 @@
         <!-- moment.js -->
         <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <!--navbar-->  
-        <nav class="navigation-bar">
+        <nav class="navigation-bar nav-extended">
             <div class="nav-wrapper #212121 grey darken-4">
                 <a href="./index.html" class="brand-logo left">Skewed News</a>
                 <ul id="nav-mobile" class="right">
@@ -31,6 +31,7 @@
                 </ul>
             </div>
         </nav>
+        <span id="coin"></span>
           <!-- Modal Trigger -->
         <div class="search-container">
             <a class="search-button pulse waves-effect waves-light btn btn-large btn-block modal-trigger #ff8f00 amber darken-3 tooltipped" 
@@ -197,7 +198,7 @@
             </div>
         </div>
         <div class="container">
-            <h5 class="weather-desc center">Enter a city name to <br>display the current weather:</h5>
+            <h5 class="weather-desc center">Enter a city name to <br>display the current weather</h5>
             <div class="row">
                 <div class="col s12">
                     <div class="input-field center">
@@ -227,8 +228,48 @@
                 </div>
             </div>
         </div>
+        <h4 class="center">Currency Converter</h4>
+        <div class="row c1">
+            <div class="input-field inline col s6">
+                <input id="currency-amount1" type="number" placeholder="Enter an amount">
+            </div>
+            <div class="input-field inline col s6" id="currency1">
+                <select class="currency1">
+                  <option value="" disabled selected>Choose a currency</option>
+                  <option value="USD">US Dollar</option>
+                  <option value="EUR">Euro</option>
+                  <option value="JPY">Japanese Yen</option>
+                  <option value="GBP">Pound Sterling</option>
+                  <option value="AUD">Australian Dollar</option>
+                  <option value="CAD">Canadian Dollar</option>
+                  <option value="CHF">Swiss Franc</option>
+                  <option value="CNY">Chinese Renminbi</option>
+                  <option value="SEK">Swedish Krona</option>
+                  <option value="NZD">New Zealand Dollar</option>
+                </select>
+            </div>
+        </div>
 
-
+        <div class="row c2">
+            <div class="input-field inline col s6">
+                <input id="currency-amount2" type="number" placeholder="Enter an amount">
+            </div>
+            <div class="input-field inline col s6" id="currency2">
+                <select class="currency2">
+                  <option value="" disabled selected>Choose a currency</option>
+                  <option value="USD">US Dollar</option>
+                  <option value="EUR">Euro</option>
+                  <option value="JPY">Japanese Yen</option>
+                  <option value="GBP">Pound Sterling</option>
+                  <option value="AUD">Australian Dollar</option>
+                  <option value="CAD">Canadian Dollar</option>
+                  <option value="CHF">Swiss Franc</option>
+                  <option value="CNY">Chinese Renminbi</option>
+                  <option value="SEK">Swedish Krona</option>
+                  <option value="NZD">New Zealand Dollar</option>
+                </select>
+            </div>
+        </div>
         <!-- footer -->
         <footer class="page-footer #212121 grey darken-4">
             <div class="footer-copyright">

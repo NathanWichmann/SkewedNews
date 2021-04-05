@@ -20,7 +20,6 @@ body {
 } */
 
 .search-button {
-    margin-top: 40px;
     margin-bottom: 60px;
     max-width: 70%;
 }
@@ -89,9 +88,9 @@ body {
 }
 
 #title-content0, #title-content1, #title-content2, #title-content3, #title-content4 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 22px;
-    text-shadow: 2px 2px 2px #ffffff, 2px 2px 2px #cc7200;
+    text-shadow: 2px 2px 1px #000000, 2px 2px 1px #cc7200;
 } 
 
 .input-field select option {
@@ -190,6 +189,26 @@ opacity: 0.8;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     transition: all ease 0.5s;
 }
+
+#coin {
+    color: black;
+    display:block;
+    margin: -20px 0 10px 10px;
+    padding: 0%;
+    text-shadow: 1px 1px 1px gold;
+}
+
+.c1, .c2 {
+    background-color: #fff8ce;
+    border: 1px solid gold;
+    box-shadow: 2px 2px 4px grey;
+    width: 90%;
+}
+
+#currency-amount1::placeholder, #currency-amount2::placeholder {
+    color: #000000;
+}
+
 
 /* @media only screen and (max-width: 900px) {
 

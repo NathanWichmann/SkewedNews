@@ -10,6 +10,12 @@ var selectedCountry;
 var selectedCategory;
 var selectedNewsSource;
 var weatherData;
+var selectedCurrency1;
+var selectedCurrency2;
+var currency2Rate;
+var currency1Rate;
+var passedCurrency;
+var passedCurrency2;
 
 function startUp() {
     fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
@@ -135,13 +141,6 @@ function getSearchedResult2(data) {
     location.assign("./search-result2.html");
 }
 
-startUp();
-
-
-
-////////////////////////////////////////////////////////////////
-
-
 function getWeather() {
     var city = enteredCity.value;
     capCity = city[0].toUpperCase() + city.slice(1);
@@ -150,7 +149,7 @@ function getWeather() {
         if (response.ok){
             response.json().then(function (data) {
                 weatherData = data;
-                console.log(weatherData);
+                // console.log(weatherData);
                 displayWeather();           
                 return;
             });
@@ -160,13 +159,9 @@ function getWeather() {
     });
 };
 
-currentTime();
-setInterval(currentTime, 1000);
-
 function currentTime() {
     $("#time").text(moment().format('h:mm:ss a'));
 }
-
 
 function displayWeather() {
     $("#weather-display").css({"display" : "block"});
@@ -183,16 +178,99 @@ function displayWeather() {
     $("#w-icon").attr("src", weatherIcon).css({"width" : "75px", "height" : "75px"});
     var note = $("#note");
     if (weatherData.main.temp < 0) {
-        note = "Dont forget to wear a coat!"
+        note = "It's freezing out there, don't forget to wear a coat!"
     } else if (weatherData.main.temp > 0 && weatherData.main.temp < 20) {
-        note = "It can get chilly out there, dont forget your jacket!"
+        note = "It's pretty chilly out there, don't forget your jacket!"
     } else if (weatherData.main.temp > 20 && weatherData.main.temp < 30) {
-        note = "Enjoy the great weather!"
+        note = "It's a beautiful weather out there, enjoy it!"
     } else if (weatherData.main.temp > 30) { 
-        note = "It pretty hot out there, dont forget a hat!"
+        note = "It's pretty hot out there, don't forget a hat!"
+    } else {
+        note = "Don't forget to bring a towel! :)"
     }
     $("#note").text(note);
 }
 
+function getCoin() {
+    fetch("https://api.coindesk.com/v1/bpi/currentprice/USD.json").then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+                // console.log(data);
+                var btcIcon = $("<i>").addClass("fa fa-btc");
+                $("#coin").text("BTC/USD: " + data.bpi.USD.rate + " ").append(btcIcon);
+                // console.log(data.bpi.USD.rate)     
+                return;
+            });
+        } else {
+            console.log("Coin Not Found...");
+        }
+    });
+};
 
+$(".currency1").change(function(){
+    fetch("https://v6.exchangerate-api.com/v6/7a3af05f2e3e883feb64a5b0/latest/" + $(this).val())
+    .then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+            selectedCurrency1 = data;
+            return;
+            });
+        } else {
+            console.log("Exchange Not Found...");
+        }
+    });
+    passedCurrency2 = $(this).val();
+})
+
+$(".currency2").change(function(){
+    var x = selectedCurrency1.conversion_rates;
+    for (let key in x) {
+        if (key === $(this).val()) {
+            currency2Rate = x[key];
+            passedCurrency = key;
+            return;
+        }
+    }
+});
+
+$("#currency-amount1").change(function(){
+    if (currency2Rate === currency1Rate) {
+        $("#currency-amount2").val($(this).val());
+    } else {
+        var convert = $(this).val() * currency2Rate;
+        $("#currency-amount2").val(convert.toFixed(2));
+    }
+});
+
+$("#currency-amount2").change(function(){
+    fetch("https://v6.exchangerate-api.com/v6/7a3af05f2e3e883feb64a5b0/latest/" + passedCurrency)
+    .then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+            selectedCurrency2 = data;
+            var y = selectedCurrency2.conversion_rates;
+            for (let key in y) {
+                if (key === passedCurrency2) {
+                    currency1Rate = y[key];
+                    return;
+                }
+            }});
+        } else {
+            console.log("Exchange Not Found...");
+        }
+    });
+    if (currency1Rate === currency2Rate) {
+        $("#currency-amount1").val($(this).val());
+    } else {
+        var convert = currency1Rate * $(this).val();
+        $("#currency-amount1").val(convert.toFixed(2));
+    }
+    // console.log(currency1Rate);
+    // console.log(currency2Rate);
+});
+
+currentTime();
+setInterval(currentTime, 1000);
+startUp();
+getCoin();
 weatherButton.addEventListener("click", getWeather);
