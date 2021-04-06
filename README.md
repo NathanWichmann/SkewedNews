@@ -1,16 +1,16 @@
 # SkewedNews
-This repository (SkewedNews) is an educational homework assignment from the CARL-OTT-FSF-PT-02-20121-U-C course. It was designed to help students become mor familiar with using Application Program Interfaces(API). We were tasked with designing and implementing an application using two different application program interfaces within a group setting. This was designed to mimic a project that is similar to a real world sinario as a full stack web deveoper.  
- 
+This repository (Skewed News) is an educational homework assignment from the CARL-OTT-FSF-PT-02-20121-U-C course. It was designed to help students become more familiar with using Application Program Interfaces (API). We were tasked with designing and implementing an application using two different application program interfaces within a group setting. This was designed to mimic a project similar to a real-world scenario as a full stack web developer.
 
 # About us
-The group decided to to implement an application that would draw from different news API'S and display those articles to the screen. Being that it is a news application, weather, date and time were added as well.
+the group decided to implement an application that would draw from different news API'S and display those articles to the screen. Being that it is a news application, weather, date, and time were added as well.
 
 ## The problem
-In the current political climate in most of the world, news has become increasingly biased. This application shows news sources from three different sources and displays the articles from each. The application doesnt attempt to solve the problem of news being biased towards one political party or another. It however, does bring attention to the types of language and instruments of persuasion used within the news articles. Each news source has their own political leanings and its up to the user the figure out what they may be. However, to simplify things, the fox-news source is extremely right wing, the cnn news source is more nuetral to right wing and the last bbc is more neutrl to left. As the reader goes through each news source they will notice the language used is politically motivated to their party of choice. Even though this is subtle and hardly noticable at the begining. People become persuaded over time.  
+In the current political climate in most of the world, news has become increasingly biased. This application shows news sources from three different sources and displays the articles from each. The application does not attempt to solve the problem of news being biased towards one political party or another. It, however, does bring attention to the types of language and instruments of persuasion used within the news articles. Each news source has their own political leanings and its up to the user the figure out what they may be. However, to simplify things, the fox-news source is extremely right wing, the CNN news source is more neutral to right wing and the last BBC is more neutral to left. As the reader goes through each news source, they will notice the language used is politically motivated to their party of choice. Even though this is subtle and hardly noticeable at the beginning. People become persuaded over time.  
 
 ## The extra
-The application provides links to the tree diffrent news sources as well as various catagories. These catagaories incude, general, sports, health, technology, science and business. 
-<img src="" alt="Screenshot"> 
+The application provides links to the tree different news sources as well as various categories. These categories include, general, sports, health, technology, science and business. 
+
+
 
 ## Live link
 <a href="https://weird-but-doable.github.io/SkewedNews/">Deployed Website</a> 
@@ -30,3 +30,5 @@ The application provides links to the tree diffrent news sources as well as vari
     
 
 ## Screenshots 
+
+<img src="" alt="Screenshot">
