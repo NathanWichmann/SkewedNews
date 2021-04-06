@@ -1,9 +1,9 @@
 .picImage{
-    border-radius: 20px;
+    border-radius: 75px;
     background-color:transparent;
 }
 .card-image{
-    box-shadow: 1px 1px 15px orange;
+    box-shadow: 0px 1px 35px 0 rgb(177, 0, 0);
 }
 
 .picImage:hover{
@@ -82,11 +82,11 @@ color: rgba(255, 255, 255, 0.966);
     background-repeat: no-repeat;
     background-size:contain;
     background-position:center;
-    background-color:#ffe9c5;
+    background-color:#ffffff;
 }
 
 #url0, #url1, #url2, #url3, #url4 {
-    background-color: #cc7200;
+    background-color: #af0202;
     margin-top: 20em;
 }
 
