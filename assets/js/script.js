@@ -272,7 +272,7 @@ $("#currency-amount2").change(function(){
 // Carousel script for autoplay
 $(document).ready(function(){
     $('.carousel').carousel({dist:0});
-    window.setInterval(function(){$('.carousel').carousel('next')},11000)
+    window.setInterval(function(){$('.carousel').carousel('next')},8000)
  });
 
 currentTime();
