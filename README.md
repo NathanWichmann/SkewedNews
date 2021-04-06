@@ -1,5 +1,5 @@
 # SkewedNews
-News. Skewed.
+News. Skewed. Today. 
 
 # About us
 Skewed news is a news comparison and everyday news application. 
