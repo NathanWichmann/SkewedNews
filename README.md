@@ -13,16 +13,17 @@ The app can also cconvery currency, displat bitcoin value and search the news fo
 ## Live link
 https://weird-but-doable.github.io/SkewedNews/
 
-# Wireframe link
+## Wireframe link
 https://drive.google.com/file/d/1as-u8TPpsL6aeiCMIf8TxA0N6DYWeBF4/view?usp=sharing
 
-# Technologies used
+## Technologies used
   As a styling framework, Materialize was used. Multiple components were used, a carousel, modal, form and cards were all pulled upon. 
 
   ## APIs used: 
-    Currency converter:
-    Bitcoin value: 
+    Currency converter: https://www.exchangerate-api.com/
+    Bitcoin value: https://www.coindesk.com/
     News sources: https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest
+    Weather: https://openweathermap.org/
     
     
 
