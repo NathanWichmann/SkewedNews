@@ -269,6 +269,12 @@ $("#currency-amount2").change(function(){
     // console.log(currency2Rate);
 });
 
+// Carousel script for autoplay
+$(document).ready(function(){
+    $('.carousel').carousel({dist:0});
+    window.setInterval(function(){$('.carousel').carousel('next')},11000)
+ });
+
 currentTime();
 setInterval(currentTime, 1000);
 startUp();
