@@ -9,10 +9,13 @@
 .picImage:hover{
     scale: 1.005;
 }
-
-body {
-    background-color:#fff6e8;
+.search-button-text{
+font-size:28px;
+font-weight: bolder;
+font-family: Arial, Helvetica, sans-serif;
+color: rgba(255, 255, 255, 0.966);
 }
+
 
 /* #logo {
     width: 100px;
@@ -38,11 +41,11 @@ body {
      overflow: visible;
      text-align: center;
      max-width: 100%;
-     background-color:bisque;
+     background-color:rgba(177, 78, 78, 0.89);
 }
 
 .modal * {
-    color: #854b00;
+    color: #000000;
 }
 
 
@@ -52,11 +55,11 @@ body {
 
 #search-button1, #search-button2 {
     margin-bottom: 3em;
-    background-color: #ff9204;
+    background-color: #d30000;
 }
 
 #search-button1:hover, #search-button2:hover {
-    background-color: #cc7200;
+    background-color: #d30000;
 }
 
 .card-image {
@@ -94,7 +97,7 @@ body {
 } 
 
 .input-field select option {
-    color: #cc7200;
+    color: #b90000;
 }
 
 .carousel {
@@ -102,7 +105,7 @@ body {
 }
 
 .tab {
-    background-color:#cc7200;
+    background-color:#000000;
     color: black;
     font-weight: 600;
     cursor: pointer;
@@ -154,8 +157,8 @@ opacity: 0.8;
 }
 
 #entered-city {
-    border: 0.5px solid lightgray;
-    box-shadow: 1px 1px 3px lightgray;
+    border: 0.5px solid rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px rgb(255, 255, 255);
 }
 
 #entered-city::placeholder {

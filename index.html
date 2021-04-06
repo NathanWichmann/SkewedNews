@@ -15,7 +15,7 @@
         <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
         <title>Skewed News</title>
     </head>
-    <body>
+    <body class= "#cfd8dc blue-grey lighten-4">
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- popper.js -->
@@ -24,8 +24,8 @@
         <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <!--navbar-->  
         <nav class="navigation-bar nav-extended">
-            <div class="nav-wrapper #212121 grey darken-4">
-                <a href="./index.html" class="brand-logo left">Skewed News</a>
+            <div class="nav-wrapper #212121 black" style="min-height: 125px">
+                <a href="./index.html" class="brand-logo left"><img src="images/SNlogo.png"></a>
                 <ul id="nav-mobile" class="right">
                     <li><a href="mailto:skewed.newz@gmail.com" target="_blank">Contact Us</a></li>
                 </ul>
@@ -34,16 +34,16 @@
         <span id="coin"></span>
           <!-- Modal Trigger -->
         <div class="search-container">
-            <a class="search-button pulse waves-effect waves-light btn btn-large btn-block modal-trigger #ff8f00 amber darken-3 tooltipped" 
+            <a class="search-button z-depth-3 pulse waves-effect waves-light btn btn-large btn-block modal-trigger #d50000 red accent-4 tooltipped" 
             data-position="bottom" 
             data-tooltip="Search by Category & Country or Source" 
-            href="#modal1">Search news articles
+            href="#modal1"><span class="search-button-text" >Search news articles</span>
             </a>
         </div>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h3>Search by Country & Category</h3>
+                <h3 style="font-weight: bolder;">Search by Country & Category</h3>
                 <div class="input-field col s12" id="country">
                     <select class="country">
                       <option value="" disabled selected>Choose a country</option>
@@ -67,7 +67,7 @@
                     <label>Category</label>
                 </div>
                 <a class="modal-close waves-effect waves-orange btn-flat" id="search-button1">Search</a>
-                <h3 class="search-title">Search by News Sources</h3>
+                <h3 class="search-title" style="font-weight: bolder;">Search by News Sources</h3>
                 <div class="input-field col s12" id="source">
                     <select class="news-source">
                       <option value="" disabled selected>Choose a news source</option>
@@ -94,7 +94,7 @@
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center"></div>
                 <!-- tab1 -->
-                <div class="carousel-item cc0 white-text">
+                <div class="carousel-item cc0 white-text ">
                     <h2 id="title-content0"></h2>
                     <a id="url0" class="btn waves-effect orange white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
@@ -271,7 +271,7 @@
             </div>
         </div>
         <!-- footer -->
-        <footer class="page-footer #212121 grey darken-4">
+        <footer class="page-footer black">
             <div class="footer-copyright">
                 <p>© 2021 Wierd but Doable LTD</p><span id="time" class="right"></span>
             </div>
