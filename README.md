@@ -1,16 +1,17 @@
 # SkewedNews
-What are we? 
+News. Skewed.
+
+# About us
 Skewed news is a news comparison and everyday news application. 
 
-# The problem: 
+## The problem
 We provided a solution to the issue of news sources providing only one side of a story. Our app provides a way to view different political perspecives to news. 
 
-# The extra
+## The extra
 The app can also cconvery currency, displat bitcoin value and search the news for any city
 
-# Live link
+## Live link
 https://weird-but-doable.github.io/SkewedNews/
-
 
 # Wireframe link
 https://drive.google.com/file/d/1as-u8TPpsL6aeiCMIf8TxA0N6DYWeBF4/view?usp=sharing
