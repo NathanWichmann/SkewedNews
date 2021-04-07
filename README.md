@@ -10,7 +10,11 @@ In the current political climate in most of the world, news has become increasin
 ## The extra
 The application provides links to the tree different news sources as well as various categories. These categories include, general, sports, health, technology, science and business. 
 
-
+## Problems Encountered
+Skewed News was not our first idea. We first decided to try and make an application that would help fishing tournaments. The initial problem was that fishing tournament organizers would have to call around to other organizers to see if they were fishing in the same lake. We had decided we would use a fishing API from the government that would allow organizers to see just where other tournaments would be happening and allow them to make another choice, so they did not over fish a lake. This proved to be a difficult task as the organizers need to store the information for the application to work. The local storage would not be an effective instrument and a server would be needed. WE quickly decided this was beyond the scope of the project and to much of a task for given skill-sets. 
+We turned out efforts towards making the Skewed News application. The major issue for this application was finding an API that would allow us to use a key word search option. 
+All the news API'S were designed to give articles and only allowed key work searches if the user signed up for a paid subscription. We eventually found a news API that allowed to search by source and this application would see the light of day.
+Many of the issues within the development of the application had to do with coding. Some of the components added, conflicted with others. These issues were quickly rectified.
 
 ## Live link
 <a href="https://weird-but-doable.github.io/SkewedNews/">Deployed Website</a> 
