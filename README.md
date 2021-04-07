@@ -26,7 +26,7 @@ Many of the issues within the development of the application had to do with conf
   As a styling framework, Materialize was used. Multiple components were used, a carousel, modal, form and cards were all pulled upon. 
 
   ## APIs used: 
-    Currency converter: https://www.exchangerate-api.com/
+    Currency converter: https://ratesapi.io
     Bitcoin value: https://www.coindesk.com/
     News sources: https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest
     Weather: https://openweathermap.org/
