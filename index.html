@@ -8,11 +8,11 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen,projection" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="shortcut icon" type="image/ico" href="./images/favicon.ico">
+        <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
         <title>Skewed News</title>
     </head>
     <body class= "#cfd8dc blue-grey lighten-4">
@@ -24,20 +24,20 @@
         <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <!--navbar-->  
         <nav class="navigation-bar nav-extended">
-            <div class="nav-wrapper #212121 black" style="min-height: 125px">
-                <a href="./index.html" class="brand-logo left"><img src="images/SNlogo.png"></a>
+            <div class="nav-wrapper #212121 black" style="min-height: 105px">
+                <a href="./index.html" class="brand-logo left"><img src="images/logo_transparent.png"></a>
                 <ul id="nav-mobile" class="right">
-                    <li><a href="mailto:skewed.newz@gmail.com" target="_blank">Contact Us</a></li>
+                    <li></li>
                 </ul>
             </div>
         </nav>
         <span id="coin"></span>
           <!-- Modal Trigger -->
         <div class="search-container">
-            <a class="search-button z-depth-3 pulse waves-effect waves-light btn btn-large btn-block modal-trigger #d50000 red accent-4 tooltipped" 
+            <a class="search-button z-depth-3 btn btn-large modal-trigger tooltipped" 
             data-position="bottom" 
             data-tooltip="Search by Category & Country or Source" 
-            href="#modal1"><span class="search-button-text" >Search news articles</span>
+            href="#modal1"><span class="search-button-text" >Search News</span>
             </a>
         </div>
         <!-- Modal Structure -->
@@ -84,10 +84,10 @@
         <div class="card">
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
-                    <li class="tab"><a class="white-text" id="most-popular" onclick="startUp()">Top Headlines</a></li>
-                    <li class="tab"><a class="white-text" data-value="cnn" id="tab-cnn" onclick="clickedTab(this)">CNN</a></li>
-                    <li class="tab"><a class="white-text" data-value="bbc-news" id="tab-bbc" onclick="clickedTab(this)">BBC</a></li>
-                    <li class="tab"><a class="white-text" data-value="fox-news" id="tab-fox" onclick="clickedTab(this)">FOX-NEWS</a></li>
+                    <li class="tab"><a class="cyan-text accent-2" id="most-popular" onclick="startUp()">Top Headlines</a></li>
+                    <li class="tab"><a class="cyan-text accent-2" data-value="cnn" id="tab-cnn" onclick="clickedTab(this)">CNN</a></li>
+                    <li class="tab"><a class="cyan-text accent-2" data-value="bbc-news" id="tab-bbc" onclick="clickedTab(this)">BBC</a></li>
+                    <li class="tab"><a class="cyan-text accent-2" data-value="fox-news" id="tab-fox" onclick="clickedTab(this)">FOX-NEWS</a></li>
                 </ul>
             </div>
             <!-- carousel -->
@@ -96,31 +96,31 @@
                 <!-- tab1 -->
                 <div class="carousel-item cc0 white-text ">
                     <h2 id="title-content0"></h2>
-                    <a id="url0" class="btn waves-effect black white-text darken-text-2 tooltipped"
+                    <a id="url0" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
                 <!-- tab2 -->
                 <div class="carousel-item cc1 white-text">
                     <h2 id="title-content1"></h2>
-                    <a id="url1" class="btn waves-effect black white-text darken-text-2 tooltipped"
+                    <a id="url1" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
                 <!-- tab3 -->
                 <div class="carousel-item cc2 white-text">
                     <h2 id="title-content2"></h2>
-                    <a id="url2" class="btn waves-effect black white-text darken-text-2 tooltipped"
+                    <a id="url2" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
                 <!-- tab4 -->
                 <div class="carousel-item cc3 white-text">
                     <h2 id="title-content3"></h2>
-                    <a id="url3" class="btn waves-effect black white-text darken-text-2 tooltipped"
+                    <a id="url3" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
                 <!-- tab5 -->
                 <div class="carousel-item cc4 white-text">
                     <h2 id="title-content4"></h2>
-                    <a id="url4" class="btn waves-effect black white-text darken-text-2 tooltipped"
+                    <a id="url4" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
             </div>
@@ -198,13 +198,13 @@
             </div>
         </div>
         <div class="container">
-            <h5 class="weather-desc center">Enter a city name to <br>display the current weather</h5>
+            <h5 class="weather-desc center">City Weather Search</h5>
             <div class="row">
                 <div class="col s12">
                     <div class="input-field center">
                         <input id="entered-city" type="search" placeholder="Enter a city">
                         <!-- <i class="material-icons">search</i> -->
-                        <button type="submit" id="weather-button"class="input-group-addon white btn">Search</button>
+                        <button type="submit" id="weather-button"class="input-group-addon btn white-text">Search</button>
                     </div>
                 </div>
             </div>
@@ -273,12 +273,14 @@
         <!-- footer -->
         <footer class="page-footer black">
             <div class="footer-copyright">
-                <p>© 2021 Wierd but Doable LTD</p><span id="time" class="right"></span>
+                <p>© 2021 Weird but Doable LTD</p><span id="time" class="right"></span>
             </div>
         </footer>
 
         <div class="a-social-icons">
             <a href="https://github.com/Weird-but-Doable" target="_blank" class="fa fa-github"></a>
+            <a href="mailto:skewed.newz@gmail.com" target="_blank" class="fa fa-envelope"></a>
+
         </div>
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="assets/js/materialize.js"></script>
