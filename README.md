@@ -8,7 +8,7 @@ the group decided to implement an application that would draw from different new
 In the current political climate in most of the world, news has become increasingly biased. This application shows news sources from three different sources and displays the articles from each. The application does not attempt to solve the problem of news being biased towards one political party or another. It, however, does bring attention to the types of language and instruments of persuasion used within the news articles. Each news source has their own political leanings and its up to the user the figure out what they may be. However, to simplify things, the fox-news source is extremely right wing, the CNN news source is more neutral to right wing and the last BBC is more neutral to left. As the reader goes through each news source, they will notice the language used is politically motivated to their party of choice. Even though this is subtle and hardly noticeable at the beginning. People become persuaded over time.  
 
 ## The extra
-The application provides links to the tree different news sources as well as various categories. These categories include, general, sports, health, technology, science and business. 
+The application provides links to the three different news sources as well as various categories. These categories include, general, sports, health, technology, science and business. 
 
 ## Problems Encountered
 Skewed News was not our first idea. We first decided to try and make an application that would help fishing tournaments. The initial problem was that fishing tournament organizers would have to call around to other organizers to see if they were fishing in the same lake. We had decided we would use a fishing API from the government that would allow organizers to see just where other tournaments would be happening and allow them to make another choice, so they did not over fish a lake. This proved to be a difficult task as the organizers need to store the information for the application to work. The local storage would not be an effective instrument and a server would be needed. WE quickly decided this was beyond the scope of the project and to much of a task for given skill-sets. 
@@ -31,7 +31,8 @@ Many of the issues within the development of the application had to do with codi
     News sources: https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest
     Weather: https://openweathermap.org/
     
-    
+## Presentation
+https://docs.google.com/presentation/d/11swhMJC37M_jzSltpU1qi0uJBUiIePb3dWuShX4RrB0/edit?usp=sharing 
 
 ## Screenshots 
 
