@@ -1,11 +1,9 @@
 .picImage{
     border-radius: 25px;
-    background-color:transparent;
+    background-color:black;
     box-shadow: 2px 2px 4px #3a3838;
-}
-/* .card-image{
 
-} */
+}
 
 .picImage:hover{
     scale: 1.005;
@@ -17,7 +15,9 @@ font-family: Arial, Helvetica, sans-serif;
 color: rgba(255, 255, 255, 0.966);
 }
 
-
+.modal-content h3 {
+    font-weight: bolder;
+}
 /* #logo {
     width: 100px;
     height: 100px;
@@ -31,12 +31,19 @@ color: rgba(255, 255, 255, 0.966);
 }
 
 .catTitle {
-    font-size: 18px;
-    color: #000000;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .search-container {
     text-align: center;
+}
+
+.nav-text123 {
+    margin-right: 5%;
+    line-height: 50px;
+    color: #02d5d1;
 }
 
 .modal {
@@ -44,7 +51,12 @@ color: rgba(255, 255, 255, 0.966);
      overflow: visible;
      text-align: center;
      max-width: 100%;
-     background-color:rgba(177, 78, 78, 0.89);
+     background-color:#cefdfc;
+}
+
+#country label, #category label, #source label {
+    color: #02d5d1;
+    font-weight: bold;
 }
 
 .modal * {
@@ -58,11 +70,13 @@ color: rgba(255, 255, 255, 0.966);
 
 #search-button1, #search-button2 {
     margin-bottom: 3em;
-    background-color: #d30000;
+    background-color: #88dddc;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px grey;
 }
 
 #search-button1:hover, #search-button2:hover {
-    background-color: #d30000;
+    background-color: rgb(0, 255, 255);
 }
 
 .card-image {
@@ -217,7 +231,7 @@ opacity: 0.8;
 
 .a-social-icons {
     position: fixed;
-    top: 1.85%;
+    top: 1%;
     right: 0px;
     transform: translateX(-50%);
     z-index: 10;
@@ -252,8 +266,8 @@ opacity: 0.8;
 }
 
 .c1, .c2 {
-    background-color: #fff8ce;
-    border: 1px solid gold;
+    background-color: #c6dfbe;
+    border: 2px solid #59a342;
     box-shadow: 2px 2px 4px grey;
     width: 90%;
 }
@@ -263,6 +277,34 @@ opacity: 0.8;
 }
 
 
-/* @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
+.nav-text123 {
+    margin-right: 7%;
+    line-height: 50px;
+}
 
-  } */
+}
+
+@media only screen and (max-width: 800px) {
+.nav-text123 {
+    margin-right: 9%;
+    line-height: 50px;
+}
+    
+}
+
+@media only screen and (max-width: 700px) {
+.nav-text123 {
+    margin-right: 13%;
+    line-height: 50px;
+}
+    
+}
+
+@media only screen and (max-width: 500px) {
+.nav-text123 {
+    margin-right: 19%;
+    line-height: 50px;
+}
+        
+    }

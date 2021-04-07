@@ -12,7 +12,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
+        <!-- Browser title -->
         <title>Skewed News</title>
     </head>
     <body class= "#cfd8dc blue-grey lighten-4">
@@ -24,26 +26,28 @@
         <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
         <!--navbar-->  
         <nav class="navigation-bar nav-extended">
-            <div class="nav-wrapper #212121 black" style="min-height: 105px">
+            <div class="nav-wrapper #212121 black" style="min-height: 100px">
+                <!-- navigation var logo -->
                 <a href="./index.html" class="brand-logo left"><img src="images/logo_transparent.png"></a>
-                <ul id="nav-mobile" class="right">
-                    <li></li>
-                </ul>
+                <small class="right nav-text123">Github:<br> Email:</small>
             </div>
         </nav>
         <span id="coin"></span>
           <!-- Modal Trigger -->
         <div class="search-container">
+            <!-- search button -->
             <a class="search-button z-depth-3 btn btn-large modal-trigger tooltipped" 
             data-position="bottom" 
-            data-tooltip="Search by Category & Country or Source" 
+            data-tooltip="Search by Category & Country or Source"
             href="#modal1"><span class="search-button-text" >Search News</span>
             </a>
         </div>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h3 style="font-weight: bolder;">Search by Country & Category</h3>
+                <!-- Search tab-1 -->
+                <h3>Search by Country & Category</h3>
+                <!-- Select country input -->
                 <div class="input-field col s12" id="country">
                     <select class="country">
                       <option value="" disabled selected>Choose a country</option>
@@ -52,8 +56,9 @@
                       <option value="in">India</option>
                       <option value="au">Australia</option>
                     </select>
-                    <label style="color: aliceblue; font-weight: bold;">Country</label>
+                    <label>Country</label>
                 </div>
+                <!-- Select category input -->
                 <div class="input-field col s12" id="category">
                     <select class="category">
                       <option value="" disabled selected>Choose a category</option>
@@ -64,10 +69,13 @@
                       <option value="sports">Sports</option>
                       <option value="technology">Technology</option>
                     </select>
-                    <label style="color: aliceblue; font-weight: bold;">Category</label>
+                    <label>Category</label>
                 </div>
-                <a class="modal-close waves-effect waves-red btn-flat" id="search-button1"><span style="font-weight: bolder;">Search</span></a>
-                <h3 class="search-title" style="font-weight: bolder;">Search by News Sources</h3>
+                <!-- Search Country & Category button-->
+                <a class="modal-close waves-effect waves-red btn-flat" id="search-button1"><span>Search</span></a>
+                <!-- Search tab-2 -->
+                <h3 class="search-title">Search by News Sources</h3>
+                <!-- Select source input -->
                 <div class="input-field col s12" id="source">
                     <select class="news-source">
                       <option value="" disabled selected>Choose a news source</option>
@@ -75,49 +83,55 @@
                       <option value="fox-news">Fox News</option>
                       <option value="cnn">CNN</option>
                     </select>
-                    <label style="color: aliceblue; font-weight: bold;">News Source</label>
+                    <label>News Source</label>
                 </div>
             </div>
-            <a class="modal-close waves-effect waves-red btn-flat" id="search-button2"><span style="font-weight: bolder;">Search</span></a>
+            <!-- Search Source button-->
+            <a class="modal-close waves-effect waves-red btn-flat" id="search-button2"><span>Search</span></a>
         </div>
-        <!--tabs scheme-->
+        <!-- Carousel -->
         <div class="card">
+            <!--Category tabs-->
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
+                    <!-- Most popular -->
                     <li class="tab"><a class="cyan-text accent-2" id="most-popular" onclick="startUp()">Top Headlines</a></li>
+                    <!-- CNN -->
                     <li class="tab"><a class="cyan-text accent-2" data-value="cnn" id="tab-cnn" onclick="clickedTab(this)">CNN</a></li>
+                    <!-- BBC -->
                     <li class="tab"><a class="cyan-text accent-2" data-value="bbc-news" id="tab-bbc" onclick="clickedTab(this)">BBC</a></li>
+                    <!-- FOX NEWS -->
                     <li class="tab"><a class="cyan-text accent-2" data-value="fox-news" id="tab-fox" onclick="clickedTab(this)">FOX-NEWS</a></li>
                 </ul>
             </div>
-            <!-- carousel -->
+            <!-- Carousel content-->
             <div class="carousel carousel-slider center">
                 <div class="carousel-fixed-item center"></div>
-                <!-- tab1 -->
+                <!-- Carousel tab-1 -->
                 <div class="carousel-item cc0 white-text ">
                     <h2 id="title-content0"></h2>
                     <a id="url0" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
-                <!-- tab2 -->
+                <!-- Carousel tab-2 -->
                 <div class="carousel-item cc1 white-text">
                     <h2 id="title-content1"></h2>
                     <a id="url1" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
-                <!-- tab3 -->
+                <!-- Carousel tab-3 -->
                 <div class="carousel-item cc2 white-text">
                     <h2 id="title-content2"></h2>
                     <a id="url2" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
-                <!-- tab4 -->
+                <!-- Carousel tab-4 -->
                 <div class="carousel-item cc3 white-text">
                     <h2 id="title-content3"></h2>
                     <a id="url3" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
                      data-position="bottom" data-tooltip="Go To Source Page">Click for more</a>
                 </div>
-                <!-- tab5 -->
+                <!-- Carousel tab-5 -->
                 <div class="carousel-item cc4 white-text">
                     <h2 id="title-content4"></h2>
                     <a id="url4" class="btn waves-effect #d50000 accent-4 white-text darken-text-2 tooltipped"
@@ -125,96 +139,113 @@
                 </div>
             </div>
         </div>
-        <!-- category cards 1st row -->
+        <!-- Categories -->
         <div class="row center">
+            <!-- Category-1 General -->
             <div class="col s4">
-                <div class="card picImage" id= "general" style="background-color: black;">
+                <div class="card picImage" id= "general">
                     <div class="card-image waves-effect waves-block">
+                        <!-- General Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/general.jpg">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)">General</span>
+                        <span class="catTitle activator">General</span>
                     </div>
                 </div>
             </div>
+            <!-- Category-2 Sports -->
             <div class="col s4">
-                <div class="card picImage" id="sports" style="background-color: black;">
+                <div class="card picImage" id="sports">
                     <div class="card-image waves-effect waves-block waves-light">
+                        <!-- Sports Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/sports.jpg">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)">Sports</span>
+                        <span class="catTitle activator">Sports</span>
                     </div>
                 </div>
             </div>
+            <!-- Category-3 Health -->
             <div class="col s4 ">
-                <div class="card picImage" id="health" style="background-color: black;">
+                <div class="card picImage" id="health">
                     <div class="card-image waves-effect waves-block waves-light">
+                        <!-- Health Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/health.jpg">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)">Health</span>
+                        <span class="catTitle activator">Health</span>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- category card 2nd row-->
         <div class="row center"> 
+            <!-- Category-4 Technology -->
             <div class="col s4">
-                <div class="card picImage" id="technology" style="background-color: black;">
+                <div class="card picImage" id="technology">
                     <div class="card-image waves-effect waves-block waves-light">
+                        <!-- Technology Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/technology.jpg">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)">Tech</span>
+                        <span class="catTitle activator">Tech</span>
                     </div>
                 </div>
             </div>
+            <!-- Category-5 Science -->
             <div class="col s4">
-                <div class="card picImage" id="science" style="background-color: black;">
+                <div class="card picImage" id="science">
                     <div class="card-image waves-effect waves-block ">
+                        <!-- Science Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/science.png">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)">Science</span>
+                        <span class="catTitle activator">Science</span>
                     </div>
                 </div>
             </div>
+            <!-- Category-6 Business -->
             <div class="col s4">
-                <div class="card picImage" id="business" style="background-color: black;">
+                <div class="card picImage" id="business">
                     <div class="card-image waves-effect waves-block waves-light">
+                        <!-- Business Image -->
                         <img class="activator responsive-img" onclick="clickedCategory(this)" 
                         src="./images/business.webp">
                     </div>
                     <div class="card-content">
-                        <span class=" catTitle activator" style="font-weight: bold; font-size: 16px; color:rgb(255, 255, 255)" >Business</span>
+                        <span class="catTitle activator">Business</span>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Weather Search -->
         <div class="container">
+            <!-- Weather Search Title -->
             <h5 class="weather-desc center">City Weather Search</h5>
             <div class="row">
+                <!-- Search City Input -->
                 <div class="col s12">
                     <div class="input-field center">
                         <input id="entered-city" type="search" placeholder="Enter a city">
-                        <!-- <i class="material-icons">search</i> -->
                         <button type="submit" id="weather-button"class="input-group-addon btn white-text">Search</button>
                     </div>
                 </div>
             </div>
+            <!-- Display Weather Container -->
             <div class="row" id="weather-display">
                 <div class="col s12">
                     <div class="card-panel">
                         <div class="weather-header">
+                            <!-- Weather Icon -->
                             <img id="w-icon">
+                            <!-- City Name -->
                             <h3 id="city-name"></h3>
                         </div>
+                        <!-- Weather Conditions -->
                         <div class="weather-info">
                             <h5 id="date"></h5>
                             <p id="temp-desc"></p>
@@ -222,17 +253,21 @@
                             <p id="feels-temp"></p>
                             <p id="current-humidity"></p>
                             <p id="current-windspeed"></p>
+                            <!-- Personal Note -->
                             <small id="note"></small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Currency Converter -->
         <h4 class="center">Currency Converter</h4>
         <div class="row c1">
+            <!-- Input Amount-1 -->
             <div class="input-field inline col s6">
                 <input id="currency-amount1" type="number" placeholder="Enter an amount">
             </div>
+            <!-- Select Currency-1 -->
             <div class="input-field inline col s6" id="currency1">
                 <select class="currency1">
                   <option value="" disabled selected>Choose a currency</option>
@@ -246,14 +281,17 @@
                   <option value="CNY">Chinese Renminbi</option>
                   <option value="SEK">Swedish Krona</option>
                   <option value="NZD">New Zealand Dollar</option>
+                  <option value="TRY">Turkish Lira</option>
                 </select>
             </div>
         </div>
 
         <div class="row c2">
+            <!-- Input Amount-2 -->
             <div class="input-field inline col s6">
                 <input id="currency-amount2" type="number" placeholder="Enter an amount">
             </div>
+            <!-- Select Currency-2 -->
             <div class="input-field inline col s6" id="currency2">
                 <select class="currency2">
                   <option value="" disabled selected>Choose a currency</option>
@@ -267,20 +305,21 @@
                   <option value="CNY">Chinese Renminbi</option>
                   <option value="SEK">Swedish Krona</option>
                   <option value="NZD">New Zealand Dollar</option>
+                  <option value="TRY">Turkish Lira</option>
                 </select>
             </div>
         </div>
-        <!-- footer -->
+        <!-- Footer Navigation -->
         <footer class="page-footer black">
+            <!-- Copyright & Time-->
             <div class="footer-copyright">
                 <p>© 2021 Weird but Doable LTD</p><span id="time" class="right"></span>
             </div>
         </footer>
-
+        <!-- Static Contact Box -->
         <div class="a-social-icons">
             <a href="https://github.com/Weird-but-Doable" target="_blank" class="fa fa-github"></a>
             <a href="mailto:skewed.newz@gmail.com" target="_blank" class="fa fa-envelope"></a>
-
         </div>
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="assets/js/materialize.js"></script>

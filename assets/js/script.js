@@ -208,7 +208,7 @@ function getCoin() {
 };
 
 $(".currency1").change(function(){
-    fetch("https://v6.exchangerate-api.com/v6/7a3af05f2e3e883feb64a5b0/latest/" + $(this).val())
+    fetch("https://api.ratesapi.io/api/latest?base=" + $(this).val())
     .then(function (response) {
         if (response.ok){
             response.json().then(function (data) {
@@ -223,7 +223,7 @@ $(".currency1").change(function(){
 })
 
 $(".currency2").change(function(){
-    var x = selectedCurrency1.conversion_rates;
+    var x = selectedCurrency1.rates;
     for (let key in x) {
         if (key === $(this).val()) {
             currency2Rate = x[key];
@@ -243,12 +243,12 @@ $("#currency-amount1").change(function(){
 });
 
 $("#currency-amount2").change(function(){
-    fetch("https://v6.exchangerate-api.com/v6/7a3af05f2e3e883feb64a5b0/latest/" + passedCurrency)
+    fetch("https://api.ratesapi.io/api/latest?base=" + passedCurrency)
     .then(function (response) {
         if (response.ok){
             response.json().then(function (data) {
             selectedCurrency2 = data;
-            var y = selectedCurrency2.conversion_rates;
+            var y = selectedCurrency2.rates;
             for (let key in y) {
                 if (key === passedCurrency2) {
                     currency1Rate = y[key];
