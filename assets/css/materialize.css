@@ -3,6 +3,7 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -5106,7 +5107,7 @@ small {
 .tabs .indicator {
   position: absolute;
   bottom: 0;
-  height: 2px;
+  height: 6px;
   background-color: #00bcd4;
   will-change: left, right;
 }

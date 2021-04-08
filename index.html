@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/style.css">
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Germania+One&display=swap" rel="stylesheet"> 
         <!-- favicon -->
         <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
         <!-- Browser title -->
@@ -33,7 +36,15 @@
             </div>
         </nav>
         <span id="coin"></span>
-          <!-- Modal Trigger -->
+        <div class="row">
+            <div class="col s12 m6 offset-m3">
+              <div class="card-panel joke-panel cyan lighten-4">
+                  <h4 class="center joke-title"> &#127917 Joke Panel &#127917</h4>
+                  <span class="black-text joke"></span>
+                  <p class="black-text punchline"></p>
+              </div>
+            </div>
+        </div>
         <div class="search-container">
             <!-- search button -->
             <a class="search-button z-depth-3 btn btn-large modal-trigger tooltipped" 
@@ -43,7 +54,7 @@
             </a>
         </div>
         <!-- Modal Structure -->
-        <div id="modal1" class="modal">
+        <div id="modal1" class="modal myModal">
             <div class="modal-content">
                 <!-- Search tab-1 -->
                 <h3>Search by Country & Category</h3>
@@ -224,37 +235,115 @@
         </div>
         <!-- Weather Search -->
         <div class="container">
-            <!-- Weather Search Title -->
-            <h5 class="weather-desc center">City Weather Search</h5>
             <div class="row">
-                <!-- Search City Input -->
-                <div class="col s12">
-                    <div class="input-field center">
-                        <input id="entered-city" type="search" placeholder="Enter a city">
-                        <button type="submit" id="weather-button"class="input-group-addon btn white-text">Search</button>
+                <div class="col s12 m6">
+                    <!-- Weather Search Title -->
+                    <h5 class="weather-desc center">City Weather Search</h5>
+                    <div class="row">
+                        <!-- Search City Input -->
+                        <div class="col s12">
+                            <div class="input-field center">
+                                <input id="entered-city" type="search" placeholder="Enter a city">
+                                <button type="submit" id="weather-button"class="input-group-addon btn white-text">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Display Weather Container -->
+                    <div class="row" id="weather-display">
+                        <div class="col s12">
+                            <div class="card-panel weather-panel">
+                                <div class="weather-header">
+                                    <!-- Weather Icon -->
+                                    <img id="w-icon">
+                                    <!-- City Name -->
+                                    <h3 id="city-name"></h3>
+                                </div>
+                                <!-- Weather Conditions -->
+                                <div class="weather-info">
+                                    <h5 id="date"></h5>
+                                    <p id="temp-desc"></p>
+                                    <p id="current-temp"></p>
+                                    <p id="feels-temp"></p>
+                                    <p id="current-humidity"></p>
+                                    <p id="current-windspeed"></p>
+                                    <!-- Personal Note -->
+                                    <small id="note"></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <h5 class="center covid-title">Covid-19 Cases</h5>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="input-field center covid-input">
+                                <input id="entered-country" type="search" placeholder="Enter a country">
+                                <button type="submit" id="covid-button"class="input-group-addon btn white-text">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="row" id="covid-display">
+                        <div class="col s12">
+                            <div class="card-panel covid-panel">
+                                <div class="covid-header">
+                                    <h3 id="country-name"></h3>
+                                </div>
+                                <div class="covid-info">
+                                    <p id="capital-city"></p>
+                                    <p id="country-location"></p>
+                                    <p id="confirmed-cases"></p>
+                                    <p id="administered"></p>
+                                    <p id="people_vaccinated"></p>
+                                    <p id="people_partially_vaccinated"></p>
+                                    <p id="deaths"></p>
+                                    <p id="recovered"></p>
+                                    <p id="life_expectancy"></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Display Weather Container -->
-            <div class="row" id="weather-display">
-                <div class="col s12">
-                    <div class="card-panel">
-                        <div class="weather-header">
-                            <!-- Weather Icon -->
-                            <img id="w-icon">
-                            <!-- City Name -->
-                            <h3 id="city-name"></h3>
+        </div>
+        <div class="search-container">
+            <!-- search button -->
+            <a class="search-button z-depth-3 btn btn-large modal-trigger tooltipped" 
+            data-position="bottom" 
+            data-tooltip="Search a word!"
+            href="#modal2"><span class="search-button-text">Dictionary</span>
+            </a>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal myModal2">
+            <div class="modal-content">
+                <h5 class="center word-title">Dictionary</h5>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="input-field center word-input">
+                            <input id="entered-word" type="search" placeholder="Enter a word">
+                            <button type="submit" id="word-button"class="input-group-addon btn white-text">Search</button>
                         </div>
-                        <!-- Weather Conditions -->
-                        <div class="weather-info">
-                            <h5 id="date"></h5>
-                            <p id="temp-desc"></p>
-                            <p id="current-temp"></p>
-                            <p id="feels-temp"></p>
-                            <p id="current-humidity"></p>
-                            <p id="current-windspeed"></p>
-                            <!-- Personal Note -->
-                            <small id="note"></small>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="row" id="word-display">
+                    <div class="col s12">
+                        <div class="card-panel word-panel">
+                            <div class="word-info">
+                                <h5>Descriptions:</h5>
+                                <p class="p0"></p>
+                                <p class="p1"></p>
+                                <p class="p2"></p>
+                                <p class="p3"></p>
+                                <p class="p4"></p>
+                                <p class="p5"></p>
+                                <p class="p6"></p>
+                                <p class="p7"></p>
+                                <p class="p8"></p>
+                                <p class="p9"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -285,7 +374,6 @@
                 </select>
             </div>
         </div>
-
         <div class="row c2">
             <!-- Input Amount-2 -->
             <div class="input-field inline col s6">

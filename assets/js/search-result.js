@@ -27,22 +27,29 @@ var fetchedResult = JSON.parse(localStorage.getItem("searchedData"));
 console.log(fetchedResult);
 
 function run() {
-    $(searchedTitle).text(capSelectedCategory + " & " + selectedCountry);
-
+    $(searchedTitle).text(capSelectedCategory + " & " + selectedCountry).css({"font-family" : 'Bebas Neue, cursive'});
     for (var i = 0; i < 20; i++) {
         var card = $("<div>").css({
-            "margin-top" : "60px", 
-            "border-bottom": "5px solid grey", 
-            "border-top": "5px solid grey", 
-            "background-color" : "#212121",
-            "text-align" : "center"
+            "margin-top" : "30px", 
+            "border-bottom": "2px solid #c4c4c4", 
+            "border-top": "2px solid #c4c4c4", 
+            "background-color" : "#d1d1d1",
+            "text-align" : "center",
+            "padding-bottom" : "10px"
         });
-        var title = $("<span>").addClass("white-text").text(fetchedResult.articles[i].title).css({"font-size" : "24px"});
+        var title = $("<span>").addClass("black-text").text(fetchedResult.articles[i].title).css({"font-size" : "24px", "font-family" : "Bebas Neue, cursive"});
         var cardContainer = $("<div>").css({"text-align" : "center"});
-        var cardImg = $("<img>").attr("src", fetchedResult.articles[i].urlToImage).height(300).width(400);
-        var link = $("<a>").attr("href", fetchedResult.articles[i].url).text("Click for more").css({"font-size" : "18px"});
+        var cardImg = $("<img>").attr("src", fetchedResult.articles[i].urlToImage).height(275).width(350).css({"border" : "1px solid #26a69a", "box-shadow" : "1px 1px 4px #26a69a"});
+        var link = $("<a>").attr("href", fetchedResult.articles[i].url).addClass("btn btn-medium").text("Click for more").css({"font-size" : "18px", "font-family" : "'Germania One', cursive"});
         $("#display-content").append(card.append(title).append(cardContainer.append(cardImg), link));
     }
 }
 
+
+function currentTime() {
+    $("#time").text(moment().format('h:mm:ss a'));
+}
+
 run();
+currentTime();
+setInterval(currentTime, 1000);

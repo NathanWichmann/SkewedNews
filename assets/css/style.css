@@ -8,32 +8,34 @@
 .picImage:hover{
     scale: 1.005;
 }
+
 .search-button-text{
 font-size:18px;
 font-weight: bolder;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Germania One', cursive;
 color: rgba(255, 255, 255, 0.966);
 }
 
 .modal-content h3 {
     font-weight: bolder;
 }
-/* #logo {
-    width: 100px;
-    height: 100px;
-} */
 
 .search-button {
     margin-bottom: 60px;
     max-width: 70%;
     background-color: #019694;
-    
+}
+
+h5, h4 ,h2 {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
 }
 
 .catTitle {
-    font-size: 16px;
+    font-size: 20px;
     color: #ffffff;
-    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
 }
 
 .search-container {
@@ -46,13 +48,22 @@ color: rgba(255, 255, 255, 0.966);
     color: #02d5d1;
 }
 
-.modal {
+.myModal {
      max-height: 100%; 
      overflow: visible;
      text-align: center;
      max-width: 100%;
      background-color:#cefdfc;
 }
+
+.myModal2 {
+    max-height: 100%; 
+    overflow:scroll;
+    max-width: 100%;
+    background-color:#cefdfc;
+}
+
+
 
 #country label, #category label, #source label {
     color: #02d5d1;
@@ -105,6 +116,7 @@ color: rgba(255, 255, 255, 0.966);
 #url0, #url1, #url2, #url3, #url4 {
     background-color: #af0202;
     margin-top: 20em;
+    font-family: 'Germania One', cursive;
 }
 #most-popular:hover, #tab-cnn:hover, #tab-bbc:hover, #tab-fox:hover {
     background-color: #3b3b3b;
@@ -123,10 +135,10 @@ color: rgba(255, 255, 255, 0.966);
 }
 
 #title-content0, #title-content1, #title-content2, #title-content3, #title-content4 {
-    color: #000000;
-    font-size: 22px;
-    text-shadow: 2px 2px 1px #a7a7a7;
-    /* -webkit-text-stroke: 0.25px rgb(255, 255, 255); */
+    color: #ffffff;
+    font-size: 24px;
+    text-shadow: 2px 2px 1px #474747;
+    -webkit-text-stroke: 1px rgb(102, 102, 102);
 } 
 
 .input-field select option {
@@ -174,6 +186,12 @@ opacity: 0.8;
     position: relative;
 }
 
+.covid-header h3 {
+    position: relative;
+    height: 75px;
+    width: 75px;
+}
+
 #time {
     color:white;
     font-size: 18px;
@@ -186,47 +204,73 @@ opacity: 0.8;
     font-weight: bold;
 }
 
-.weather-desc {
+.weather-desc, .covid-title, .word-title {
     color: #000000;
-    font-weight: bold;
     font-size: 28px;
 }
 
-.weather-info p {
+.weather-info p, .covid-info p{
     font-size: 18px;
+    font-weight: bold;
 }
 
-#weather-button {
+.word-info {
+    font-size: 16px;
+}
+
+#weather-button, #covid-button, #word-button {
     color: #000000;
     border-radius: 15px;
     margin: 10px;
     background-color: #019694;
-    font-weight: bold;
+    font-family: 'Germania One', cursive;
 }
 
-#weather-display {
+#weather-display, #covid-display, #word-display {
     display: none;
 }
 
-#entered-city {
+#entered-city, #entered-country, #entered-word {
     border: 0.5px solid #808080;
     box-shadow: 1px 1px 3px rgb(59, 51, 51);
     padding-left: 10px;
     background-color: #a6dbda;
     font-weight: bold;
+    width: 100%;
 }
 
-#entered-city::placeholder {
+#entered-city::placeholder, #entered-country::placeholder, #entered-word::placeholder  {
     color: black;
 }
 
-.card-panel {
+.joke-title {
+    font-size: 22px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1.5px;
+    background-color: #7ec469;
+    border-radius: 20px;
+    padding: 5px 0 5px 0;
+}
+
+.joke, .punchline {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.joke-panel {
+    border: 1px solid black;
+}
+
+.weather-panel, .covid-panel, .word-panel {
     padding: 24px;
     margin: 0.5rem 0 1rem 0;
     border-radius: 2px;
     background-color: #b5eeed;
     border: 0.5px solid rgb(255, 255, 255);
     box-shadow: 1px 1px 3px rgb(59 51 51);
+}
+.weather-panel {
+    padding-bottom: 163.5px;
 }
 
 .a-social-icons {
@@ -266,8 +310,8 @@ opacity: 0.8;
 }
 
 .c1, .c2 {
-    background-color: #c6dfbe;
-    border: 2px solid #59a342;
+    background-color: #ebfae5;
+    border: 1px solid #7ec469;
     box-shadow: 2px 2px 4px grey;
     width: 90%;
 }
@@ -301,5 +345,12 @@ opacity: 0.8;
     .nav-text123 {
         margin-right: 19%;
         line-height: 50px;
+    }    
+}
+
+@media only screen and (min-width: 1000px) {
+    .catTitle {
+        font-size: 40px;
+        letter-spacing: 4px;
     }    
 }

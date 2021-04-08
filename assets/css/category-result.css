@@ -2,9 +2,67 @@
     margin-right: auto;
     margin-left: auto;
 }
+
 body {
-    color: black;
+    background-color: #e2e2e2;
 }
+
 #searchedTitle {
     text-align: center;
+}
+
+.a-social-icons {
+    position: fixed;
+    top: 1%;
+    right: 0px;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.a-social-icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+    line-height: 0px;
+    background-color: #02d5d1;
+    border: 1px solid #303030;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    color: #000000;
+}
+.a-social-icons a:hover {
+    background-color: #252525;
+    color: #f6f5f5;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.5s;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-text123 {
+        margin-right: 7%;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-text123 {
+        margin-right: 9%;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-text123 {
+        margin-right: 13%;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-text123 {
+        margin-right: 19%;
+        line-height: 50px;
+    }    
 }

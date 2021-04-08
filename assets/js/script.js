@@ -7,10 +7,16 @@ var topHeadlinesUrl = document.getElementById("url");
 var searchedButton1 = document.getElementById("search-button1");
 var weatherButton = document.getElementById("weather-button");
 var enteredCity = document.getElementById("entered-city");
+var enteredCountry = document.getElementById("entered-country");
+var enteredWord = document.getElementById("entered-word");
+var wordInfo = document.querySelector(".word-info");
 var selectedCountry;
 var selectedCategory;
 var selectedNewsSource;
 var weatherData;
+var covidData;
+var covidData2;
+var wordData;
 var selectedCurrency1;
 var selectedCurrency2;
 var currency2Rate;
@@ -271,11 +277,119 @@ $("#currency-amount2").change(function(){
     // console.log(currency2Rate);
 });
 
+function jokes() {
+    fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+            // console.log(data);
+            $(".joke").text("> " + data.setup);
+            $(".punchline").text("- " + data.punchline);
+            
+            return;
+            });
+        } else {
+            console.log("Joke Not Found...");
+        }
+    });
+}
+
+$("#covid-button").on("click", function() {
+    var country = enteredCountry.value;
+    capCountry = country[0].toUpperCase() + country.slice(1);
+    var apiURL = "https://covid-api.mmediagroup.fr/v1//cases?country=" + capCountry;
+    fetch(apiURL).then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+                covidData = data.All;
+                // console.log(covidData);
+                var apiURL2 = "https://covid-api.mmediagroup.fr/v1/vaccines?country=" + capCountry;
+                fetch(apiURL2).then(function (response) {
+                    if (response.ok){
+                        response.json().then(function (data) {
+                            covidData2 = data.All;
+                            // console.log(covidData2);
+                            displayCovidCases();         
+                            return;
+                        });
+                    } else {
+                        alert("City Not Found...");
+                    }
+                });     
+                return;
+            });
+        } else {
+            alert("City Not Found...");
+        }
+    });
+});
+
+function displayCovidCases() {
+    $("#covid-display").css({"display" : "block"});
+    $("#country-name").text(covidData.country);
+    $("#capital-city").text("Capital city: " + covidData.capital_city);
+    $("#country-location").text("Country Location: " + covidData.location);
+    $("#confirmed-cases").text("Confirmed Cases: " + covidData.confirmed.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#administered").text("Administered: " + covidData2.administered.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#people_vaccinated").text("Vaccinated People: " + covidData2.people_vaccinated.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#people_partially_vaccinated").text("Partially Vaccinated People: " + covidData2.people_partially_vaccinated.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#deaths").text("Deaths: " + covidData.deaths.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#recovered").text("Recovered: " + covidData.recovered.toLocaleString(undefined, {maximumFractionDigits: 2}));
+    $("#life_expectancy").text("Life Expectancy: " + covidData.life_expectancy);
+
+}
+
+
+$("#word-button").on("click", function() {
+    var word = enteredWord.value;
+    fetch("https://wordsapiv1.p.rapidapi.com/words/" + word, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "d6c357909cmshef3a40e88dbc2dfp125dc8jsn10afbba45f5c",
+            "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
+        }
+    })
+    .then(response => {
+        console.log(response);
+        response.json().then(function (data) {
+            console.log(data);
+            wordData = data.results;
+            console.log(wordData);
+            displayWord();
+        });
+
+    })
+    .catch(err => {
+        console.error(err);
+    });
+});
+
+function displayWord() {
+    if (enteredWord.value === ("")) {
+        alert("Please enter a valid word");
+    } else {
+        $("#word-display").css({"display" : "block"});
+        for (var i = 0; i < 10; i++) {
+            $(".p" + i).text(" ");
+        }
+        for (var i = 0; i < wordData.length; i++) {
+            console.log(i);
+            var myText = wordData[i].definition;
+            var myCapText = myText[0].toUpperCase() + myText.slice(1)
+            $(".p" + i).text("- " + myCapText);
+            console.log(myCapText);
+        }
+    }
+}
+
 // Carousel script for autoplay
 // $(document).ready(function(){
 //     $('.carousel').carousel({dist:0});
 //     window.setInterval(function(){$('.carousel').carousel('next')},8000)
 //  });
+
+jokes();
+setInterval(jokes, 10000);
 
 currentTime();
 setInterval(currentTime, 1000);
