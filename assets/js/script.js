@@ -389,8 +389,8 @@ function displayWord() {
 //     window.setInterval(function(){$('.carousel').carousel('next')},8000)
 //  });
 
-jokes();
-setInterval(jokes, 10000);
+// jokes();
+// setInterval(jokes, 10000);
 
 currentTime();
 setInterval(currentTime, 1000);
