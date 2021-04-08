@@ -307,8 +307,9 @@ $("#covid-button").on("click", function() {
                 fetch(apiURL2).then(function (response) {
                     if (response.ok){
                         response.json().then(function (data) {
+                            console.log(data);
                             covidData2 = data.All;
-                            // console.log(covidData2);
+                            console.log(covidData2);
                             displayCovidCases();         
                             return;
                         });
