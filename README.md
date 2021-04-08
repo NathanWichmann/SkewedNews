@@ -43,7 +43,8 @@ The application provides links to the three different news sources as well as va
 <a href="https://drive.google.com/file/d/1as-u8TPpsL6aeiCMIf8TxA0N6DYWeBF4/view?usp=sharing">Wireframe</a> 
 
 ## Presentation
-https://docs.google.com/presentation/d/11swhMJC37M_jzSltpU1qi0uJBUiIePb3dWuShX4RrB0/edit?usp=sharing 
+<a href="https://docs.google.com/presentation/d/11swhMJC37M_jzSltpU1qi0uJBUiIePb3dWuShX4RrB0/edit?usp=sharing ">Presentation</a> 
+
 
 ## Screenshots 
 ![mobile-ss](images/mobile-ss.png)
