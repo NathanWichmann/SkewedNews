@@ -1,3 +1,4 @@
+/////////////////////////////////////////////////////////////////////////////////
 var mostPopular = document.getElementById("most-popular");
 var mostPopularContent = document.getElementById("most-popular-content");
 var topHeadlinesImage = document.getElementById("url-to-image");
@@ -16,6 +17,7 @@ var currency2Rate;
 var currency1Rate;
 var passedCurrency;
 var passedCurrency2;
+/////////////////////////////////////////////////////////////////////////////////
 
 function startUp() {
     fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
@@ -177,16 +179,16 @@ function displayWeather() {
     $("#current-windspeed").text("Wind Speed: " + parseInt(weatherData.wind.speed * 3.6) + "km/h");
     $("#w-icon").attr("src", weatherIcon).css({"width" : "75px", "height" : "75px"});
     var note = $("#note");
-    if (weatherData.main.temp < 0) {
+    if (weatherData.main.temp <= 0) {
         note = "It's freezing out there, don't forget to wear a coat!"
-    } else if (weatherData.main.temp > 0 && weatherData.main.temp < 20) {
+    } else if (weatherData.main.temp > 0 && weatherData.main.temp <= 12) {
         note = "It's pretty chilly out there, don't forget your jacket!"
-    } else if (weatherData.main.temp > 20 && weatherData.main.temp < 30) {
+    } else if (weatherData.main.temp > 12 && weatherData.main.temp < 30) {
         note = "It's a beautiful weather out there, enjoy it!"
     } else if (weatherData.main.temp > 30) { 
-        note = "It's pretty hot out there, don't forget a hat!"
+        note = "It's pretty hot out there, don't forget to enjoy a Margarita!"
     } else {
-        note = "Don't forget to bring a towel! :)"
+        note = "Don't forget to bring a towel!"
     }
     $("#note").text(note);
 }
