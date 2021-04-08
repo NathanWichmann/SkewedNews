@@ -35,6 +35,9 @@ The application provides links to the three different news sources as well as va
     Bitcoin value: https://www.coindesk.com/
     News sources: https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest
     Weather: https://openweathermap.org/
+    official-joke-api
+    wordsAPI
+    covidAPI https://github.com/M-Media-Group/Covid-19-API
 
 ## Live link
 <a href="https://weird-but-doable.github.io/SkewedNews/">Live Website</a> 
