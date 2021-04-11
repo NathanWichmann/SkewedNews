@@ -1,8 +1,10 @@
+///////////////////////////////////Initializition////////////////////////////////////
 var displayContent = document.querySelector("#display-content");
 var searchedTitle = document.getElementById("searchedTitle");
-
 var selectedNewsSource = localStorage.getItem("selectedSource");
+var fetchedResult = JSON.parse(localStorage.getItem("searchedData2"));
 
+// Title Content
 if (selectedNewsSource === "bbc-news") {
     selectedNewsSource = "BBC News";
 }
@@ -12,11 +14,9 @@ if (selectedNewsSource === "fox-news") {
 if (selectedNewsSource === "cnn") {
     selectedNewsSource = "CNN";
 }
+// console.log(fetchedResult);
 
-
-var fetchedResult = JSON.parse(localStorage.getItem("searchedData2"));
-console.log(fetchedResult);
-
+// News Generator
 function run() {
     $(searchedTitle).text(selectedNewsSource).css({"font-family" : 'Bebas Neue, cursive'});
     for (var i = 0; i < 20; i++) {
@@ -36,11 +36,12 @@ function run() {
     }
 }
 
-
+// Current Time
 function currentTime() {
     $("#time").text(moment().format('h:mm:ss a'));
 }
 
+///////////////////////////////////Starters////////////////////////////////////
 run();
 currentTime();
 setInterval(currentTime, 1000);

@@ -1,4 +1,4 @@
-/////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////Initializition////////////////////////////////////
 var mostPopular = document.getElementById("most-popular");
 var mostPopularContent = document.getElementById("most-popular-content");
 var topHeadlinesImage = document.getElementById("url-to-image");
@@ -23,25 +23,61 @@ var currency2Rate;
 var currency1Rate;
 var passedCurrency;
 var passedCurrency2;
-/////////////////////////////////////////////////////////////////////////////////
 
+///////////////////////////////////Programs///////////////////////////////////////////
+
+// Joke Panel
+function jokes() {
+    fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+            // console.log(data);
+            $(".joke").text("> " + data.setup);
+            $(".punchline").text("- " + data.punchline);
+            
+            return;
+            });
+        } else {
+            console.log("Joke Not Found...");
+        }
+    });
+}
+
+// BTC Displayer
+function getCoin() {
+    fetch("https://api.coindesk.com/v1/bpi/currentprice/USD.json").then(function (response) {
+        if (response.ok){
+            response.json().then(function (data) {
+                // console.log(data);
+                var btcIcon = $("<i>").addClass("fa fa-btc");
+                $("#coin").text("BTC/USD: " + data.bpi.USD.rate + " ").append(btcIcon);
+                // console.log(data.bpi.USD.rate)     
+                return;
+            });
+        } else {
+            console.log("Coin Not Found...");
+        }
+    });
+};
+// Carousel
 function startUp() {
     fetch('https://saurav.tech/NewsAPI/top-headlines/category/general/us.json ')
-.then(function (response) {
-    return response.json();
-})
-.then(function (data) {
-    // console.log(data);
-    for ( i = 0; i < 5; i++) { 
-        // console.log (data.articles[i]);
-        $(".cc" + i).css({
-            "background-image" : "url(" + data.articles[i].urlToImage + ")",
-            "background-repeat":  "no-repeat"
-        });
-        $("#title-content" + i).text(data.articles[i].title);
-        $("#url" + i).attr("href", data.articles[i].url).attr({"target" : "_blank"});
-    }
-});
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        // console.log(data);
+        for ( i = 0; i < 5; i++) { 
+            // console.log (data.articles[i]);
+            $(".cc" + i).css({
+                "background-image" : "url(" + data.articles[i].urlToImage + ")",
+                "background-repeat":  "no-repeat"
+            });
+            $("#title-content" + i).text(data.articles[i].title);
+            $("#url" + i).attr("href", data.articles[i].url).attr({"target" : "_blank"});
+        }
+    });
 }
 
 function clickedTab(a) {
@@ -65,6 +101,12 @@ function clickedTab(a) {
 
 }
 
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+});
+
+// Categories
 function clickedCategory(a) {
     fetch("https://saurav.tech/NewsAPI/top-headlines/category/" + a.parentElement.parentElement.id + "/us.json ")
     .then(function (response) {
@@ -82,11 +124,7 @@ function displayResults(data) {
     location.assign("./category-result.html");
 }
 
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-});
-
+// Search News Modal
 $(document).ready(function(){
     $('.tabs').tabs();
     $('.modal').modal();
@@ -105,7 +143,7 @@ $(document).ready(function(){
         console.log(selectedNewsSource);
     });
 });
-
+// Country & Category Search
 $("#search-button1").on("click", function() {
     console.log(selectedCountry + " and " + selectedCategory);
     fetch("https://saurav.tech/NewsAPI/top-headlines/category/" + selectedCategory + "/" + selectedCountry + ".json")
@@ -119,7 +157,7 @@ $("#search-button1").on("click", function() {
         getSearchedResult(searchedData);
     });
 });
-
+// Country & Category Page Navigator
 function getSearchedResult(data) {
     var myData = data;
     localStorage.setItem("selectedCountry", selectedCountry);
@@ -127,7 +165,7 @@ function getSearchedResult(data) {
     localStorage.setItem("searchedData", JSON.stringify(myData));
     location.assign("./search-result.html");
 }
-
+// Source Search
 $("#search-button2").on("click", function() {
     console.log(selectedNewsSource);
     fetch("https://saurav.tech/NewsAPI/everything/" + selectedNewsSource + ".json")
@@ -141,7 +179,7 @@ $("#search-button2").on("click", function() {
         getSearchedResult2(searchedData);
     });
 });
-
+// Source Page Navigator
 function getSearchedResult2(data) {
     var myData = data;
     localStorage.setItem("selectedSource", selectedNewsSource);
@@ -149,6 +187,7 @@ function getSearchedResult2(data) {
     location.assign("./search-result2.html");
 }
 
+// Weather Panel
 function getWeather() {
     var city = enteredCity.value;
     capCity = city[0].toUpperCase() + city.slice(1);
@@ -166,11 +205,7 @@ function getWeather() {
         }
     });
 };
-
-function currentTime() {
-    $("#time").text(moment().format('h:mm:ss a'));
-}
-
+// Weather Displayer
 function displayWeather() {
     $("#weather-display").css({"display" : "block"});
     var desc = weatherData.weather[0].description;
@@ -199,22 +234,8 @@ function displayWeather() {
     $("#note").text(note);
 }
 
-function getCoin() {
-    fetch("https://api.coindesk.com/v1/bpi/currentprice/USD.json").then(function (response) {
-        if (response.ok){
-            response.json().then(function (data) {
-                // console.log(data);
-                var btcIcon = $("<i>").addClass("fa fa-btc");
-                $("#coin").text("BTC/USD: " + data.bpi.USD.rate + " ").append(btcIcon);
-                // console.log(data.bpi.USD.rate)     
-                return;
-            });
-        } else {
-            console.log("Coin Not Found...");
-        }
-    });
-};
-
+// Currency Panel
+// Currency Input 1
 $(".currency1").change(function(){
     fetch("https://api.ratesapi.io/api/latest?base=" + $(this).val())
     .then(function (response) {
@@ -229,7 +250,7 @@ $(".currency1").change(function(){
     });
     passedCurrency2 = $(this).val();
 })
-
+// Currency Input 2
 $(".currency2").change(function(){
     var x = selectedCurrency1.rates;
     for (let key in x) {
@@ -240,7 +261,7 @@ $(".currency2").change(function(){
         }
     }
 });
-
+// Currency Amount 1
 $("#currency-amount1").change(function(){
     if (currency2Rate === currency1Rate) {
         $("#currency-amount2").val($(this).val());
@@ -249,7 +270,7 @@ $("#currency-amount1").change(function(){
         $("#currency-amount2").val(convert.toFixed(2));
     }
 });
-
+// Currency Amount 2
 $("#currency-amount2").change(function(){
     fetch("https://api.ratesapi.io/api/latest?base=" + passedCurrency)
     .then(function (response) {
@@ -277,23 +298,7 @@ $("#currency-amount2").change(function(){
     // console.log(currency2Rate);
 });
 
-function jokes() {
-    fetch("https://official-joke-api.appspot.com/random_joke")
-    .then(function (response) {
-        if (response.ok){
-            response.json().then(function (data) {
-            // console.log(data);
-            $(".joke").text("> " + data.setup);
-            $(".punchline").text("- " + data.punchline);
-            
-            return;
-            });
-        } else {
-            console.log("Joke Not Found...");
-        }
-    });
-}
-
+// Covid Panel
 $("#covid-button").on("click", function() {
     var country = enteredCountry.value;
     capCountry = country[0].toUpperCase() + country.slice(1);
@@ -325,6 +330,7 @@ $("#covid-button").on("click", function() {
     });
 });
 
+// Covid Panel Displayer
 function displayCovidCases() {
     $("#covid-display").css({"display" : "block"});
     $("#country-name").text(covidData.country);
@@ -340,7 +346,7 @@ function displayCovidCases() {
 
 }
 
-
+// Dictionary
 $("#word-button").on("click", function() {
     var word = enteredWord.value;
     fetch("https://wordsapiv1.p.rapidapi.com/words/" + word, {
@@ -365,6 +371,7 @@ $("#word-button").on("click", function() {
     });
 });
 
+// Dictionary description displayer
 function displayWord() {
     if (enteredWord.value === ("")) {
         alert("Please enter a valid word");
@@ -383,15 +390,14 @@ function displayWord() {
     }
 }
 
-// Carousel script for autoplay
-// $(document).ready(function(){
-//     $('.carousel').carousel({dist:0});
-//     window.setInterval(function(){$('.carousel').carousel('next')},8000)
-//  });
+// Current Time Displayer
+function currentTime() {
+    $("#time").text(moment().format('h:mm:ss a'));
+}
 
+///////////////////////////////////Starters////////////////////////////////////
 jokes();
 setInterval(jokes, 10000);
-
 currentTime();
 setInterval(currentTime, 1000);
 startUp();

@@ -1,10 +1,12 @@
+///////////////////////////////////Initializition////////////////////////////////////
 var displayContent = document.querySelector("#display-content");
 var searchedTitle = document.getElementById("searchedTitle");
-
 var selectedCategory = localStorage.getItem("selectedCategory");
 var selectedCountry = localStorage.getItem("selectedCountry");
 var capSelectedCategory = selectedCategory[0].toUpperCase() + selectedCategory.slice(1);
+var fetchedResult = JSON.parse(localStorage.getItem("searchedData"));
 
+// Title Content
 if (selectedCountry === "us") {
     selectedCountry = "USA";
 }
@@ -17,15 +19,11 @@ if (selectedCountry === "in") {
 if (selectedCountry === "au") {
     selectedCountry = "Australia";
 }
+// console.log(capSelectedCategory);
+// console.log(selectedCountry);
+// console.log(fetchedResult);
 
-
-
-console.log(capSelectedCategory);
-console.log(selectedCountry);
-
-var fetchedResult = JSON.parse(localStorage.getItem("searchedData"));
-console.log(fetchedResult);
-
+// News Generator
 function run() {
     $(searchedTitle).text(capSelectedCategory + " & " + selectedCountry).css({"font-family" : 'Bebas Neue, cursive'});
     for (var i = 0; i < 20; i++) {
@@ -45,11 +43,11 @@ function run() {
     }
 }
 
-
+// Current Time
 function currentTime() {
     $("#time").text(moment().format('h:mm:ss a'));
 }
-
+///////////////////////////////////Starters////////////////////////////////////
 run();
 currentTime();
 setInterval(currentTime, 1000);

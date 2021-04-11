@@ -1,11 +1,12 @@
+///////////////////////////////////Initializition////////////////////////////////////
 var displayContent = document.querySelector("#display-content");
-
 var categoryName = localStorage.getItem("categoryName");
 var capCategoryName = categoryName[0].toUpperCase() + categoryName.slice(1);
-console.log(capCategoryName);
-
 var fetchedResult = JSON.parse(localStorage.getItem("passedData"));
-console.log(fetchedResult);
+// console.log(fetchedResult);
+// console.log(capCategoryName);
+
+// News Generator
 function run() {
     $(searchedTitle).text(capCategoryName).css({"font-family" : 'Bebas Neue, cursive'});
     for (var i = 0; i < 20; i++) {
@@ -25,11 +26,12 @@ function run() {
     }
 }
 
-
+// Current Time
 function currentTime() {
     $("#time").text(moment().format('h:mm:ss a'));
 }
 
+///////////////////////////////////Starters////////////////////////////////////
 run();
 currentTime();
 setInterval(currentTime, 1000);
